@@ -10,6 +10,9 @@ noremap <C-H> <C-W>h
 imap jk <Esc>
 imap kj <Esc>
 
+nmap te :tabedit<CR>
+noremap <C-w> :q<CR>
+
 " NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1

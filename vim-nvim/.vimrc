@@ -17,6 +17,9 @@ let NERDTreeShowHidden=1
 "" Fzf
 nmap <C-p> :GFiles<CR>
 
+" CoC
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-rust-analyzer']
+
 call plug#begin() 
 " The default plugin directory will be as follows: 
 " "   - Vim (Linux/macOS): '~/.vim/plugged' 

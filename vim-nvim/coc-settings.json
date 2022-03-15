@@ -1,0 +1,7 @@
+{
+  "rust-analyzer": {
+    "server": {
+      "path": "/home/aaron/.local/bin/rust-analyzer"
+    }
+  }
+}

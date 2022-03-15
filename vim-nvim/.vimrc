@@ -6,6 +6,10 @@ noremap <C-K> <C-W>k
 noremap <C-J> <C-W>j
 noremap <C-H> <C-W>h
 
+" Esc
+imap jk <Esc>
+imap kj <Esc>
+
 " NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1

@@ -1,3 +1,6 @@
+" Save/quit
+noremap <C-s> :w<CR>
+
 " Splitpane shortcuts
 noremap <C-T> :vsp<CR>
 noremap <C-D> :sp<CR>
@@ -68,8 +71,6 @@ if exists('+termguicolors')
       set termguicolors
     endif
 colorscheme nord
-
-nnoremap <C-s> :SyntasticToggleMode<CR>
 
 " Don't try to be vi compatible
 set nocompatible

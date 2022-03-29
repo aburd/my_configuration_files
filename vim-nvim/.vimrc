@@ -163,3 +163,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:rustfmt_autosave = 1
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')

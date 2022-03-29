@@ -1,7 +1,11 @@
 {
   "rust-analyzer": {
     "server": {
-      "path": "/usr/bin/rust-analyzer"
+      "path": "~/.local/bin/rust-analyzer"
+    },
+    "procMacro": {
+      "enable": false
     }
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "json"]
 }

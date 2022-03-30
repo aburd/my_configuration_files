@@ -21,6 +21,7 @@ nnoremap <C-Right> :tabnext<CR>
 " NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+map <leader>r :NERDTreeFind<cr>
 
 "" Fzf
 nmap <C-p> :GFiles<CR>

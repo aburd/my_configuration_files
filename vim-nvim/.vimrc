@@ -15,8 +15,8 @@ imap kj <Esc>
 
 noremap <C-t>e :tabedit<CR>
 noremap <C-w> :q<CR>
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-t>h :tabprevious<CR>
+nnoremap <C-t>l :tabnext<CR>
 
 " NERDTree
 nmap <F6> :NERDTreeToggle<CR>
@@ -43,6 +43,8 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'wincent/command-t'
 Plug 'dag/vim-fish'
 Plug 'pangloss/vim-javascript'
@@ -52,6 +54,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
 
 " Markdown
 " If you have nodejs and yarn

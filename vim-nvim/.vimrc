@@ -1,3 +1,6 @@
+" Leader
+let maplocalleader = ","
+
 " Save/quit
 noremap <C-s> :w<CR>
 
@@ -25,6 +28,7 @@ map <leader>r :NERDTreeFind<cr>
 
 "" Fzf
 nmap <C-p> :GFiles<CR>
+nmap <C-i> :Files<CR>
 
 " CoC
 let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-rust-analyzer']
@@ -68,6 +72,9 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
+
+" Clojure
+Plug 'Olical/conjure'
 
 call plug#end()
 

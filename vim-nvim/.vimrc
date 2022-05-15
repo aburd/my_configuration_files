@@ -75,6 +75,9 @@ Plug 'arcticicestudio/nord-vim'
 
 " Clojure
 Plug 'Olical/conjure'
+Plug 'tpope/vim-dispatch'
+Plug 'clojure-vim/vim-jack-in'
+Plug 'radenling/vim-dispatch-neovim'
 
 call plug#end()
 

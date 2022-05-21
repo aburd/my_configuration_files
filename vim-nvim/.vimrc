@@ -3,6 +3,7 @@ let maplocalleader = ","
 
 " Save/quit
 noremap <C-s> :w<CR>
+tnoremap <Esc> <C-\><C-n>
 
 " Splitpane shortcuts
 noremap <C-T> :vsp<CR>
@@ -16,10 +17,14 @@ noremap <C-H> <C-W>h
 imap jk <Esc>
 imap kj <Esc>
 
+" Tabs
 noremap <C-t>e :tabedit<CR>
 noremap <C-w> :q<CR>
 nnoremap <C-t>h :tabprevious<CR>
 nnoremap <C-t>l :tabnext<CR>
+
+" Highlighting
+noremap <C-m> :noh<CR>
 
 " NERDTree
 nmap <F6> :NERDTreeToggle<CR>
@@ -78,6 +83,7 @@ Plug 'Olical/conjure'
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
+Plug 'eraserhd/parinfer-rust'
 
 call plug#end()
 

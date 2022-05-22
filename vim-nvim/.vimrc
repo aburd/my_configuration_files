@@ -56,7 +56,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'wincent/command-t'
 Plug 'dag/vim-fish'
-Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -103,6 +102,10 @@ filetype off
 
 " Turn on syntax highlighting
 syntax on
+
+" Sometimes syntax highling can get out of sync in large JSX and TSX files
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " For plugins to load correctly
 filetype plugin indent on

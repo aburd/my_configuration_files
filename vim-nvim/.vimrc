@@ -2,7 +2,8 @@
 let maplocalleader = ","
 
 " Save/quit
-noremap <C-s> :w<CR>
+noremap <C-w> :w<CR>
+noremap <C-e> :Format<CR>
 tnoremap <Esc> <C-\><C-n>
 
 " Splitpane shortcuts
@@ -19,7 +20,6 @@ imap kj <Esc>
 
 " Tabs
 noremap <C-t>e :tabedit<CR>
-noremap <C-w> :q<CR>
 nnoremap <C-t>h :tabprevious<CR>
 nnoremap <C-t>l :tabnext<CR>
 

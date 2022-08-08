@@ -132,6 +132,7 @@ set encoding=utf-8
 set wrap
 set textwidth=0
 set linebreak
+set wrapmargin=0
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2

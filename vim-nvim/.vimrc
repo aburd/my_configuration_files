@@ -13,6 +13,11 @@ noremap <C-L> <C-W>l
 noremap <C-K> <C-W>k
 noremap <C-J> <C-W>j
 noremap <C-H> <C-W>h
+" Splitpane Size
+nnoremap <C-q>h :vertical resize +5<CR>
+nnoremap <C-q>l :vertical resize -5<CR>
+nnoremap <C-q>j :resize +5<CR>
+nnoremap <C-q>k :resize -5<CR>
 
 " Esc
 imap jk <Esc>
@@ -22,6 +27,7 @@ imap kj <Esc>
 noremap <C-t>e :tabedit<CR>
 nnoremap <C-t>h :tabprevious<CR>
 nnoremap <C-t>l :tabnext<CR>
+
 
 " Highlighting
 noremap <C-m> :noh<CR>

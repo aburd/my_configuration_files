@@ -1,3 +1,6 @@
+let g:airline_theme='wombat'
+let g:CommandTPreferredImplementation='lua'
+
 " Leader
 let maplocalleader = ","
 

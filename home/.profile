@@ -29,6 +29,7 @@ fi
 
 export PATH="~/.local/bin:$PATH"
 export PATH="/home/aburd/.local/bin/nvim-linux64/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

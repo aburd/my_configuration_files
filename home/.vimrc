@@ -8,6 +8,7 @@ let maplocalleader = ","
 noremap <C-w> :w<CR>
 noremap <C-e> :Format<CR>
 tnoremap <Esc> <C-\><C-n>
+imap <tab> <tab>
 
 " Splitpane shortcuts
 noremap <C-T> :vsp<CR>
@@ -57,6 +58,7 @@ call plug#begin()
 "   - Avoid using standard Vim directory names like 'plugin'
 
 " Any valid git URL is allowed
+" Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -87,7 +89,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 
 " Clojure
-Plug 'Olical/conjure'
+Plug 'Olical/conjure', { 'tag': 'v4.37.0' }
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'

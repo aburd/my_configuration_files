@@ -65,6 +65,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'wincent/command-t'
 Plug 'dag/vim-fish'
 Plug 'leafgarland/typescript-vim'

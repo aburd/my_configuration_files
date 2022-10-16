@@ -38,3 +38,4 @@ export NVM_DIR="$HOME/.nvm"
 alias bat=batcat
 alias ll="exa -la"
 alias show_keypress="xev"
+alias fexplore="ranger"

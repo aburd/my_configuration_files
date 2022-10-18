@@ -8,6 +8,9 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+my_dir="$(dirname "$(readlink -f "$0")")"
+source $my_dir/util.sh
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -40,6 +43,8 @@ alias bat=batcat
 alias ll="exa -la"
 alias show_keypress="xev"
 alias fexplore="ranger"
+alias cb="connect_bluetooth Galaxy"
+alias db="disconnect_bluetooth Galaxy"
 # There are a couple tools capable of writing to the clipboard; I use xsel. 
 # It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:
 # $ echo "Some Text" | xsel -i -b
@@ -49,3 +54,4 @@ alias copy="xsel"
 if [ -z "$VIMRUNTIME" ]; then
   neofetch
 fi
+

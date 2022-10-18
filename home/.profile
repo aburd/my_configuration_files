@@ -45,6 +45,7 @@ alias show_keypress="xev"
 alias fexplore="ranger"
 alias cb="connect_bluetooth Galaxy"
 alias db="disconnect_bluetooth Galaxy"
+alias sus="systemctl suspend"
 # There are a couple tools capable of writing to the clipboard; I use xsel. 
 # It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:
 # $ echo "Some Text" | xsel -i -b

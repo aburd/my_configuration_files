@@ -30,6 +30,7 @@ fi
 export PATH="~/.local/bin:$PATH"
 export PATH="/home/aburd/.local/bin/nvim-linux64/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/.local/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -39,3 +40,12 @@ alias bat=batcat
 alias ll="exa -la"
 alias show_keypress="xev"
 alias fexplore="ranger"
+# There are a couple tools capable of writing to the clipboard; I use xsel. 
+# It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:
+# $ echo "Some Text" | xsel -i -b
+alias copy="xsel"
+
+# Not in vim 
+if [ -z "$VIMRUNTIME" ]; then
+  neofetch
+fi

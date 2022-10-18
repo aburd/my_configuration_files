@@ -14,7 +14,6 @@ checkFileAndLink()
     return;
   fi
 
-  echo "$SRC_PATH $TARGET_DIR $filename";
   targetPath="$TARGET_DIR/$filename";
 
   writeFile=true;

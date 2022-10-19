@@ -87,6 +87,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Themes
+Plug 'flazz/vim-colorschemes'
 Plug 'arcticicestudio/nord-vim'
 
 " Clojure
@@ -104,7 +105,10 @@ if exists('+termguicolors')
       let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
       set termguicolors
     endif
-colorscheme nord
+" colorscheme nord
+colorscheme turtles 
+" Uncomment this if your theme doesn't have transparency, but you want it to
+" hi Normal guibg=NONE ctermbg=NONE
 
 " Don't try to be vi compatible
 set nocompatible

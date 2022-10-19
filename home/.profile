@@ -43,6 +43,7 @@ alias bat=batcat
 alias ll="exa -la"
 alias show_keypress="xev"
 alias fexplore="ranger"
+alias music="mocp"
 alias cb="connect_bluetooth Galaxy"
 alias db="disconnect_bluetooth Galaxy"
 alias sus="systemctl suspend"

@@ -8,8 +8,7 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-my_dir="$(dirname "$(readlink -f "$0")")"
-source $my_dir/util.sh
+source $HOME/util.sh
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

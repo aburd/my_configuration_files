@@ -39,7 +39,7 @@ checkFileAndLink()
 echo "Hi, $USER. I'm here to help set up your PC's configuration files.";
 
 # Link all files in home directory
-for f in home/.*;
+for f in home/*;
 do
   checkFileAndLink "$f" $HOME;
 done

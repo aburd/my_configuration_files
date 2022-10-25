@@ -106,7 +106,7 @@ if exists('+termguicolors')
       set termguicolors
     endif
 " colorscheme nord
-colorscheme turtles 
+colorscheme 1989 
 " Uncomment this if your theme doesn't have transparency, but you want it to
 " hi Normal guibg=NONE ctermbg=NONE
 

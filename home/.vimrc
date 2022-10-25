@@ -32,7 +32,6 @@ noremap <C-t>e :tabedit<CR>
 nnoremap <C-t>h :tabprevious<CR>
 nnoremap <C-t>l :tabnext<CR>
 
-
 " Highlighting
 noremap <C-m> :noh<CR>
 

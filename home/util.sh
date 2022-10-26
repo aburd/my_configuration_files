@@ -16,3 +16,10 @@ connect_bluetooth()
 {
   bluetoothctl connect "$(get_bluetooth_device_id $1)"
 }
+
+reset_bluetooth()
+{
+  disconnect_bluetooth $1
+  connect_bluetooth $1
+}
+

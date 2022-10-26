@@ -1,8 +1,22 @@
-#!/bin/sh
+#!/bin/bash
 
 SCRIPT=$(realpath "$0");
 SCRIPT_PATH=$(dirname "$SCRIPT");
 PJT_PATH=$(dirname $SCRIPT_PATH);
+
+print_div()
+{
+  local width=$(tput cols)
+  printf '=%.0s' $(seq 1 $width)
+}
+
+print_header()
+{
+  TEXT=$1;
+  print_div
+  echo "$TEXT";
+  print_div
+}
 
 checkFileAndLink()
 {
@@ -36,7 +50,7 @@ checkFileAndLink()
   echo " ";
 }
 
-echo "Hi, $USER. I'm here to help set up your PC's configuration files.";
+print_header "Hi, $USER. I'm here to help set up your PC's configuration files.";
 
 # Link all files in home directory
 for f in home/*;

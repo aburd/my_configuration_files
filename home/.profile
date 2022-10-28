@@ -49,8 +49,8 @@ alias rb="reset_bluetooth Galaxy"
 alias sus="systemctl suspend"
 
 # git
-alias gpM="git push origin master" 
-alias gpm="git push origin main" 
+alias gPo="git push origin" 
+alias gpo="git pull origin" 
 alias gs="git status" 
 alias gc="git commit -m" 
 alias gcb="git checkout -b" 

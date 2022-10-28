@@ -54,3 +54,13 @@ is_bluetooth_device_connected()
     return 1
   fi
 }
+
+galaxy_pulse_audio_id()
+{
+  pactl list short sinks | grep bluez | sed -r 's/[0-9]\s+([a-zA-Z0-9\._]+).*/\1/'
+}
+
+increase_galaxy_audio()
+{
+  pactl set-sink-volume "$(galaxy_pulse_audio_id)" +10%
+}

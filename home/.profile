@@ -47,6 +47,16 @@ alias cb="connect_bluetooth Galaxy"
 alias db="disconnect_bluetooth Galaxy"
 alias rb="reset_bluetooth Galaxy"
 alias sus="systemctl suspend"
+
+# git
+alias gpM="git push origin master" 
+alias gpm="git push origin main" 
+alias gs="git status" 
+alias gc="git commit -m" 
+alias gcb="git checkout -b" 
+alias gl="git log" 
+alias ga="git add ." 
+
 # There are a couple tools capable of writing to the clipboard; I use xsel. 
 # It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:
 # $ echo "Some Text" | xsel -i -b

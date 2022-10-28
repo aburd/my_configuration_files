@@ -60,7 +60,9 @@ galaxy_pulse_audio_id()
   pactl list short sinks | grep bluez | sed -r 's/[0-9]\s+([a-zA-Z0-9\._]+).*/\1/'
 }
 
-increase_galaxy_audio()
+update_galaxy_volume()
 {
-  pactl set-sink-volume "$(galaxy_pulse_audio_id)" +10%
+  # e.g. "+10%"
+  local vol_change="$1"
+  pactl set-sink-volume "$(galaxy_pulse_audio_id)" "$vol_change"
 }

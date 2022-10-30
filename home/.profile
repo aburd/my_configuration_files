@@ -42,11 +42,14 @@ alias bat=batcat
 alias ll="exa -la"
 alias show_keypress="xev"
 alias fexplore="ranger"
+alias sus="systemctl suspend"
 alias music="mocp"
 alias cb="connect_bluetooth Galaxy"
 alias db="disconnect_bluetooth Galaxy"
 alias rb="reset_bluetooth Galaxy"
-alias sus="systemctl suspend"
+alias vb="update_galaxy_volume"
+alias vbu="update_galaxy_volume +10%"
+alias vbd="update_galaxy_volume -10%"
 
 # git
 alias gPo="git push origin" 

@@ -41,8 +41,8 @@ let NERDTreeShowHidden=1
 map <leader>r :NERDTreeFind<cr>
 
 "" Fzf
-nmap <C-p> :GFiles<CR>
-nmap <C-i> :Files<CR>
+noremap <C-p> :GFiles<CR>
+nnoremap <C-u> :Files<CR>
 
 " CoC
 let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-rust-analyzer']

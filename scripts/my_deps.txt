@@ -1,0 +1,15 @@
+# term
+ranger
+moc
+bat
+exa
+git
+neofetch
+ 
+# gui
+flameshot
+
+# language
+fcitx
+fcitx-config-common
+fcitx-mozc

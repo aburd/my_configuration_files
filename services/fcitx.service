@@ -1,0 +1,10 @@
+[Unit]
+Description=fcitx - For multi-lang support
+Documentation=https://wiki.archlinux.org/title/fcitx
+After=graphical.target
+
+[Service]
+ExecStart=/usr/bin/fcitx
+
+[Install]
+

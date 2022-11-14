@@ -11,5 +11,7 @@ flameshot
 
 # language
 fcitx
+fcitx5
 fcitx-config-common
 fcitx-mozc
+fcitx5-mozc

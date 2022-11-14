@@ -45,7 +45,7 @@ checkFileAndLink()
 
   if [ $writeFile = true ]; then
     echo "Setting $targetPath";
-    ln -sf "$PJT_PATH/$SRC_PATH" "$targetPath"
+    sudo ln -sf "$PJT_PATH/$SRC_PATH" "$targetPath"
   fi
   echo " ";
 }
@@ -78,4 +78,10 @@ fi
 for f in nvim/*;
 do
   checkFileAndLink "$f" "$HOME/.config/nvim";
+done
+# systemd
+echo "system d"
+for f in services/*;
+do
+  checkFileAndLink "$f" '/etc/systemd/system';
 done

@@ -1,0 +1,9 @@
+[Unit]
+Description=xremap - For remapping keys
+Documentation=https://github.com/k0kubun/xremap
+After=graphical.target
+
+[Service]
+ExecStart=/usr/bin/xremap /home/aburd/.xremap.yml
+
+[Install]

@@ -74,3 +74,5 @@ if [ -z "$VIMRUNTIME" ]; then
   neofetch
 fi
 
+# sway
+export SWAYSOCK=/run/user/$(id -u)/sway-ipc.$(id -u).$(pgrep -x sway).sock

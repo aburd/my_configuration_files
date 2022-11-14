@@ -57,6 +57,11 @@ for f in home/*;
 do
   checkFileAndLink "$f" $HOME;
 done
+# Link all hidden files in home directory
+for f in home/.*;
+do
+  checkFileAndLink "$f" $HOME;
+done
 # Link all files in nvim 
 NVIM_DIR="$HOME/.config/nvim";
 if ! [ -d "$NVIM_DIR" ]; then

@@ -62,6 +62,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'

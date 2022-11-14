@@ -8,10 +8,10 @@ neofetch
  
 # gui
 flameshot
+nm-tray
+dolphin
 
 # language
 fcitx
-fcitx5
 fcitx-config-common
 fcitx-mozc
-fcitx5-mozc

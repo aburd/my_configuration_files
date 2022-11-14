@@ -54,14 +54,19 @@ install_xremap()
 
 MY_DEPS="$(cat ./scripts/my_deps.txt | sed -r '/#|^\s*$/d')"
 
-if [ $EUID != 0 ]; then
-    sudo "$0" "$@"
-    exit $?
-fi
 emphasize "This script will attempt to get you up and running with your dependencies"
 emphasize "You can update dependencies at $(pwd)/scripts/my_deps.txt" 
 for dep in $MY_DEPS; do
   install "$dep"
 done
-install_xremap
-
+if bin_exists xremap; then 
+  echo "xremap already exists, skipping"
+else
+  install_xremap
+fi
+# kickoff
+if bin_exists kickoff; then 
+  echo "kickoff already exists, skipping"
+else
+  cargo install kickoff
+fi

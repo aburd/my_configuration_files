@@ -80,7 +80,6 @@ do
   checkFileAndLink "$f" "$HOME/.config/nvim";
 done
 # systemd
-echo "system d"
 for f in services/*;
 do
   checkFileAndLink "$f" '/etc/systemd/system';

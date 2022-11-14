@@ -46,6 +46,7 @@ alias bat=batcat
 alias ll="exa -la"
 alias show_keypress="xev"
 alias fexplore="ranger"
+alias fileexplore="dolphin"
 alias sus="systemctl suspend"
 alias music="mocp"
 alias cb="connect_bluetooth Galaxy"
@@ -54,6 +55,7 @@ alias rb="reset_bluetooth Galaxy"
 alias vb="update_galaxy_volume"
 alias vbu="update_galaxy_volume +10%"
 alias vbd="update_galaxy_volume -10%"
+alias c5g="nmcli con up E81B69E974AF-5G"
 
 # git
 alias gPo="git push origin" 
@@ -74,5 +76,3 @@ if [ -z "$VIMRUNTIME" ]; then
   neofetch
 fi
 
-# sway
-export SWAYSOCK=/run/user/$(id -u)/sway-ipc.$(id -u).$(pgrep -x sway).sock

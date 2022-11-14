@@ -169,6 +169,7 @@ set ttyfast
 
 " Status bar
 set laststatus=2
+set cmdheight=1
 
 " Last line
 set showmode

@@ -41,11 +41,27 @@ emphasize()
   echo "*******"
 }
 
+install_xremap()
+{
+  echo "Installing xremap"
+  local url="https://github.com/k0kubun/xremap/releases/download/v0.7.8/xremap-linux-x86_64-sway.zip"
+  local zip_file='zremap.zip'
+  wget "$url" -O "$zip_file"
+  unzip "$zip_file"
+  mv 'xremap' '/usr/bin'
+  rm "$zip_file"
+}
+
 MY_DEPS="$(cat ./scripts/my_deps.txt | sed -r '/#|^\s*$/d')"
 
+if [ $EUID != 0 ]; then
+    sudo "$0" "$@"
+    exit $?
+fi
 emphasize "This script will attempt to get you up and running with your dependencies"
 emphasize "You can update dependencies at $(pwd)/scripts/my_deps.txt" 
 for dep in $MY_DEPS; do
   install "$dep"
 done
+install_xremap
 

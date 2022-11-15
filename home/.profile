@@ -73,6 +73,6 @@ alias copy="xsel"
 
 # Not in vim 
 if [ -z "$VIMRUNTIME" ]; then
-  neofetch
+  neofetch --jp2a /home/aburd/Pictures/hackers_albun.jpg --color_blocks off --size 30%
 fi
 

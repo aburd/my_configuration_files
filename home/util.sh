@@ -66,3 +66,18 @@ update_galaxy_volume()
   local vol_change="$1"
   pactl set-sink-volume "$(galaxy_pulse_audio_id)" "$vol_change"
 }
+
+install_fonts()
+{
+  local font_dir="$1"
+  if [ -n "$font_dir" ]; then
+    pushd "$font_dir"
+    # next command extracts all ttf and otf files into your `.fonts` folder.
+    unzip "*.zip" "*.ttf" "*.otf" -d "$HOME/.fonts"
+    # next command rebuilds font cache
+    sudo fc-cache -f -v
+    popd
+  else
+    echo "Error: Provide a font directory"
+  fi
+}

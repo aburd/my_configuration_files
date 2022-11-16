@@ -5,6 +5,10 @@ bat
 exa
 git
 neofetch
+slurp
+
+# Hardware
+brightnessctl
  
 # gui
 flameshot

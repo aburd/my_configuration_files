@@ -84,3 +84,8 @@ for f in services/*;
 do
   checkFileAndLink "$f" '/etc/systemd/system';
 done
+# .config
+for d in ./.config/*;
+do
+  checkFileAndLink "$d" "$HOME/.config"
+done

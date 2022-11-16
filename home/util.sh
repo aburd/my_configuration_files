@@ -57,7 +57,7 @@ is_bluetooth_device_connected()
 
 galaxy_pulse_audio_id()
 {
-  pactl list short sinks | grep bluez | sed -r 's/[0-9]\s+([a-zA-Z0-9\._]+).*/\1/'
+  pactl list short sinks | grep bluez | sed -r 's/.+(bluez[a-zA-Z0-9\._]+sink).*/\1/'
 }
 
 update_galaxy_volume()

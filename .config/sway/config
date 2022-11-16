@@ -225,9 +225,13 @@ bar {
 
     colors {
         statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        background #184D47bb
+        focused_workspace #ffffff #035956ff #ffffff
+        active_workspace #ffffff #035956cc #ffffff
+        inactive_workspace #00917C #00917Cff #00917C44
     }
 }
+
+client.focused #184D47 #184D47 #ffffff
 
 include /etc/sway/config.d/*

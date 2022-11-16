@@ -8,7 +8,7 @@ bar()
   if [ "$bat" -lt 15 ]; then
     bat_emoji="🪫"
   fi
-  local brightness="$(brightnessctl i | sed -rn 's/.+([0-9]{2,3}\%).*/\1/p')"
+  local brightness="$(brightnessctl i | sed -rn 's/.*\(([0-9]{1,3}\%)\).*/\1/p')"
 
   echo "💡$brightness $bat_emoji$bat% $d"
 }

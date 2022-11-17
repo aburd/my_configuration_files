@@ -1,3 +1,6 @@
+# wm
+sway
+
 # term
 ranger
 moc
@@ -6,6 +9,7 @@ exa
 git
 neofetch
 slurp
+wf-recorder
 
 # Hardware
 brightnessctl

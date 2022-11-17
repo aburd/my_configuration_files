@@ -79,6 +79,12 @@ output eDP-1 {
     # Start your launcher
     bindsym $mod+p exec $menu
 
+    # screenshot
+    bindsym $mod+F3 exec $HOME/.config/sway/screenshot.sh
+
+    # emoji
+    bindsym $mod+Shift+o exec wofi-emoji
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -185,8 +191,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-    # emoji
-    bindsym $mod+Shift+o exec wofi-emoji
 #
 # Resizing containers:
 #

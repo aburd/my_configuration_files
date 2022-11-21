@@ -9,7 +9,7 @@ bar()
     bat_emoji="🪫"
   fi
   local brightness="$(brightnessctl i | sed -rn 's/.*\(([0-9]{1,3}\%)\).*/\1/p')"
-  local vol="$(amixer sget Master | sed -rn 's/.+\[([0-9]+)%\].+/\1/p')"
+  local vol="$(amixer -D pulse sget Master | sed -rn 's/.+\[([0-9]+)%\].+/\1/p' | head -1)"
   local v_emoji="$(vol_emoji $vol)"
 
   echo "$v_emoji$vol% 💡$brightness $bat_emoji$bat% $d"

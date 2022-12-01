@@ -4,13 +4,10 @@ bar()
 {
   local d="$(date +'%Y-%m-%d %H:%M')"
   local bat="$(cat /sys/class/power_supply/BAT1/capacity)"
-  local bat_emoji="🔋"
-  if [ "$bat" -lt 15 ]; then
-    bat_emoji="🪫"
-  fi
   local brightness="$(brightnessctl i | sed -rn 's/.*\(([0-9]{1,3}\%)\).*/\1/p')"
   local vol="$(amixer -D pulse sget Master | sed -rn 's/.+\[([0-9]+)%\].+/\1/p' | head -1)"
   local v_emoji="$(vol_emoji $vol)"
+  local bat_emoji="$(battery_emoji)"
 
   echo "$v_emoji$vol% 💡$brightness $bat_emoji$bat% $d"
 }
@@ -27,6 +24,23 @@ vol_emoji()
     echo "🔈"
   else
     echo "🔇"
+  fi
+}
+
+battery_emoji()
+{
+  local bat_high_emoji="🔋"
+  local bat_low_emoji="🪫"
+  local bat_charging_emoji="🔌"
+  local status="$(cat /sys/class/power_supply/BAT1/status)"
+  if [ "$status" = "Charging" ]; then
+    echo "$bat_charging_emoji"
+  else
+    if [ "$bat" -lt 15 ]; then
+      echo "$bat_low_emoji" 
+    else
+      echo "$bat_high_emoji"
+    fi
   fi
 }
 

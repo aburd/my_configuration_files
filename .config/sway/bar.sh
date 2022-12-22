@@ -1,15 +1,24 @@
 #!/bin/sh
 
+BAT_PATH="/sys/class/power_supply/BAT1"
+
 bar()
 {
   local d="$(date +'%Y-%m-%d %H:%M')"
-  local bat="$(cat /sys/class/power_supply/BAT1/capacity)"
   local brightness="$(brightnessctl i | sed -rn 's/.*\(([0-9]{1,3}\%)\).*/\1/p')"
   local vol="$(amixer -D pulse sget Master | sed -rn 's/.+\[([0-9]+)%\].+/\1/p' | head -1)"
   local v_emoji="$(vol_emoji $vol)"
-  local bat_emoji="$(battery_emoji)"
+  local menu_s="$v_emoji$vol% 💡$brightness"
 
-  echo "$v_emoji$vol% 💡$brightness $bat_emoji$bat% $d"
+  # add bat if exists
+  if [ -e $BAT_PATH ]; then
+    local bat="$(cat $BAT_PATH/capacity)"
+    local bat_emoji="$(battery_emoji)"
+    menu_s="$menu_s $bat_emoji$bat%"
+  fi
+
+  menu_s="$menu_s $d"
+  echo $menu_s
 }
 
 vol_emoji()
@@ -32,7 +41,7 @@ battery_emoji()
   local bat_high_emoji="🔋"
   local bat_low_emoji="🪫"
   local bat_charging_emoji="🔌"
-  local status="$(cat /sys/class/power_supply/BAT1/status)"
+  local status="$(cat $BAT_PATH/status)"
   if [ "$status" = "Charging" ]; then
     echo "$bat_charging_emoji"
   else

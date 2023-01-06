@@ -75,7 +75,8 @@ output eDP-1 {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+p exec $menu
+    # bindsym $mod+p exec $menu
+    bindsym $mod+p exec ~/.cargo/bin/kickoff
 
     # screenshot
     bindsym $mod+F3 exec $HOME/.config/sway/screenshot.sh

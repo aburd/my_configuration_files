@@ -4,10 +4,10 @@ BAT_PATH="/sys/class/power_supply/BAT1"
 
 bar()
 {
-  local d="$(date +'%Y-%m-%d %H:%M')"
-  local brightness="$(brightnessctl i | sed -rn 's/.*\(([0-9]{1,3}\%)\).*/\1/p')"
   local vol="$(amixer -D pulse sget Master | sed -rn 's/.+\[([0-9]+)%\].+/\1/p' | head -1)"
   local v_emoji="$(vol_emoji $vol)"
+  local brightness="$(brightnessctl i | sed -rn 's/.*\(([0-9]{1,3}\%)\).*/\1/p')"
+
   local menu_s="$v_emoji$vol% 💡$brightness"
 
   # add bat if exists
@@ -17,6 +17,7 @@ bar()
     menu_s="$menu_s $bat_emoji$bat%"
   fi
 
+  local d="$(date +'%Y-%m-%d %H:%M')"
   menu_s="$menu_s $d"
   echo $menu_s
 }

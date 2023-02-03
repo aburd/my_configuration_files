@@ -18,6 +18,7 @@ brightnessctl
 flameshot
 nm-tray
 dolphin
+wdisplays
 
 # language
 fcitx

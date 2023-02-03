@@ -76,3 +76,8 @@ if [ -z "$VIMRUNTIME" ]; then
   neofetch --jp2a /home/aburd/Pictures/hackers_albun.jpg --color_blocks off --size 30%
 fi
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

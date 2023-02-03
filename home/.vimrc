@@ -45,7 +45,7 @@ noremap <C-p> :GFiles<CR>
 nnoremap <C-u> :Files<CR>
 
 " CoC
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-rust-analyzer']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph']
 
 call plug#begin() 
 " The default plugin directory will be as follows: 
@@ -58,6 +58,7 @@ call plug#begin()
 
 " Any valid git URL is allowed
 " Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'lambdalisue/suda.vim'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

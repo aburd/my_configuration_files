@@ -110,3 +110,5 @@ source ~/.profile
 export PNPM_HOME="/home/aburd/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

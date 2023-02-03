@@ -81,3 +81,6 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# opam configuration
+[[ ! -r /home/aburd/.opam/opam-init/init.zsh ]] || source /home/aburd/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

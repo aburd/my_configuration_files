@@ -14,7 +14,10 @@
     "clj_kondo_lint": {
       "command": "clj-kondo",
       "debounce": 100,
-      "args": ["--lint", "%filepath"],
+      "args": [
+        "--lint",
+        "%filepath"
+      ],
       "offsetLine": 0,
       "offsetColumn": 0,
       "sourceName": "clj-kondo",
@@ -35,5 +38,15 @@
       }
     }
   },
-  "diagnostic-languageserver.filetypes": { "clojure": "clj_kondo_lint" }
+  "diagnostic-languageserver.filetypes": {
+    "clojure": "clj_kondo_lint"
+  },
+  "languageserver": {
+    "ocaml": {
+      "command": "ocamllsp",
+      "filetypes": [
+        "ml"
+      ]
+    }
+  }
 }

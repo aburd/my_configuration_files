@@ -74,6 +74,9 @@ output eDP-1 {
     # Kill focused window
     bindsym $mod+Shift+q kill
 
+    # Monitor positions
+    bindsym $mod+Shift+d exec wdisplays
+
     # Start your launcher
     # bindsym $mod+p exec $menu
     bindsym $mod+p exec ~/.cargo/bin/kickoff

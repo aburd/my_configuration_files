@@ -24,6 +24,7 @@ flameshot
 nm-tray
 dolphin
 wdisplays
+wofi
 
 # language
 fcitx

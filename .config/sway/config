@@ -65,7 +65,7 @@ output eDP-1 {
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 input "type:keyboard" {
-    repeat_delay 300
+    repeat_delay 400
     repeat_rate 30
 }
 
@@ -84,7 +84,8 @@ input "type:keyboard" {
 
     # Start your launcher
     # bindsym $mod+p exec $menu
-    bindsym $mod+p exec ~/.cargo/bin/kickoff
+    # bindsym $mod+p exec ~/.cargo/bin/kickoff
+    bindsym $mod+p exec /bin/wofi --show run
 
     # screenshot
     bindsym $mod+F3 exec $HOME/.config/sway/screenshot.sh

@@ -70,3 +70,6 @@ if bin_exists kickoff; then
 else
   cargo install kickoff
 fi
+
+# OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

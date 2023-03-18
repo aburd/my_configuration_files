@@ -1,7 +1,12 @@
 # wm
 sway
+i3
+
+# shell
+zsh
 
 # term
+curl
 ranger
 moc
 bat

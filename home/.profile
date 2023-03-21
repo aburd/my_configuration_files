@@ -56,6 +56,7 @@ alias vb="update_galaxy_volume"
 alias vbu="update_galaxy_volume +10%"
 alias vbd="update_galaxy_volume -10%"
 alias c5g="nmcli con up E81B69E974AF-5G"
+alias display_wayland="wdisplays"
 
 # git
 alias gPo="git push origin" 

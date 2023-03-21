@@ -25,6 +25,7 @@ nm-tray
 dolphin
 wdisplays
 wofi
+wdisplays
 
 # language
 fcitx

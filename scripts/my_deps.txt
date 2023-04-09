@@ -4,6 +4,7 @@ i3
 
 # shell
 zsh
+tmux
 
 # term
 curl

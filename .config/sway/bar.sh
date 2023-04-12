@@ -56,7 +56,7 @@ battery_emoji()
 
 is_muted()
 {
-  amixer -D pulse get Master | grep '\[off\]'
+  amixer get Master | grep '\[off\]'
   if [ $? = 0 ]; then
     return 0
   fi

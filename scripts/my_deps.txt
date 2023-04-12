@@ -16,6 +16,7 @@ git
 neofetch
 slurp
 wf-recorder
+wl-clipboard
 
 # Hardware
 brightnessctl

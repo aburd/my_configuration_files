@@ -4,7 +4,7 @@ BAT_PATH="/sys/class/power_supply/BAT1"
 
 bar()
 {
-  local vol="$(amixer -D pulse sget Master | sed -rn 's/.+\[([0-9]+)%\].+/\1/p' | head -1)"
+  local vol="$(amixer sget Master | sed -rn 's/.+\[([0-9]+)%\].+/\1/p' | head -1)"
   local v_emoji="$(vol_emoji $vol)"
   local brightness="$(brightnessctl i | sed -rn 's/.*\(([0-9]{1,3}\%)\).*/\1/p')"
 

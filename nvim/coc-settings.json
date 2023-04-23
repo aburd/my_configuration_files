@@ -10,14 +10,12 @@
     "json",
     "clojure"
   ],
+  "coc.preferences.jumpCommand": "tabe",
   "diagnostic-languageserver.linters": {
     "clj_kondo_lint": {
       "command": "clj-kondo",
       "debounce": 100,
-      "args": [
-        "--lint",
-        "%filepath"
-      ],
+      "args": ["--lint", "%filepath"],
       "offsetLine": 0,
       "offsetColumn": 0,
       "sourceName": "clj-kondo",
@@ -44,9 +42,19 @@
   "languageserver": {
     "ocaml": {
       "command": "ocamllsp",
-      "filetypes": [
-        "ml"
-      ]
+      "filetypes": ["ml"]
+    },
+    "flow": {
+      "command": "flow",
+      "args": ["lsp"],
+      "filetypes": ["javascript", "javascriptreact"],
+      "initializationOptions": {},
+      "requireRootPattern": 1,
+      "settings": {},
+      "rootPatterns": [".flowconfig"]
     }
+  },
+  "eslint": {
+    "autoFixOnSave": true
   }
 }

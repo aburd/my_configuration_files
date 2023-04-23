@@ -24,7 +24,7 @@ checkFileAndLink()
   TARGET_DIR=$2;
 
   filename=$(basename "$SRC_PATH");
-  if [ $filename = "." ] || [ $filename = ".." ]; then
+  if [ "$filename" = "." ] || [ "$filename" = ".." ]; then
     return;
   fi
 
@@ -43,7 +43,7 @@ checkFileAndLink()
     done
   fi
 
-  if [ $writeFile = true ]; then
+  if [ "$writeFile" = true ]; then
     echo "Setting $targetPath";
     sudo ln -sf "$PJT_PATH/$SRC_PATH" "$targetPath"
   fi

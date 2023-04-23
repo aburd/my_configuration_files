@@ -2,17 +2,19 @@ let g:airline_theme='wombat'
 let g:CommandTPreferredImplementation='lua'
 
 " Leader
-let maplocalleader = ","
+let mapleader = " "
+let maplocalleader = " "
 
 " Save/quit
-noremap <C-w> :w<CR>
-noremap <C-e> :Format<CR>
+noremap <leader>w :q<CR>
+noremap <leader>e :Format<CR>
+noremap <leader>d :w<CR>
 tnoremap <Esc> <C-\><C-n>
 imap <tab> <tab>
 
 " Splitpane shortcuts
-noremap <C-T> :vsp<CR>
-noremap <C-D> :sp<CR>
+noremap <leader>v :vsp<CR>
+noremap <leader>h :sp<CR>
 noremap <C-L> <C-W>l
 noremap <C-K> <C-W>k
 noremap <C-J> <C-W>j
@@ -23,14 +25,18 @@ nnoremap <C-q>l :vertical resize -5<CR>
 nnoremap <C-q>j :resize +5<CR>
 nnoremap <C-q>k :resize -5<CR>
 
+" Jump
+nnoremap <Bslash>j :call CocActionAsync('jumpDefinition')<CR>
+
 " Esc
 imap jk <Esc>
 imap kj <Esc>
 
 " Tabs
-noremap <C-t>e :tabedit<CR>
-nnoremap <C-t>h :tabprevious<CR>
-nnoremap <C-t>l :tabnext<CR>
+noremap <leader>t :tabedit<CR>
+nnoremap <leader>q :tabclose<CR>
+nnoremap <leader>j :tabprevious<CR>
+noremap <leader>k :tabnext<CR>
 
 " Highlighting
 noremap <C-m> :noh<CR>
@@ -43,6 +49,12 @@ map <leader>r :NERDTreeFind<cr>
 "" Fzf
 noremap <C-p> :GFiles<CR>
 nnoremap <C-u> :Files<CR>
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " CoC
 let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph']
@@ -80,6 +92,8 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 Plug 'jasonccox/vim-wayland-clipboard'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'nicwest/vim-camelsnek'
 
 " Markdown
 " If you have nodejs and yarn
@@ -100,8 +114,26 @@ Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'eraserhd/parinfer-rust'
 
+" Node
+Plug 'mfussenegger/nvim-dap'
+Plug 'mxsdev/nvim-dap-vscode-js'
+
 call plug#end()
 
+<<<<<<< HEAD
+=======
+" Color scheme (terminal)
+if exists('+termguicolors')
+      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      set termguicolors
+    endif
+" colorscheme nord
+colorscheme nightfox
+" Uncomment this if your theme doesn't have transparency, but you want it to
+" hi Normal guibg=NONE ctermbg=NONE
+
+>>>>>>> efe8720 (various)
 " Don't try to be vi compatible
 set nocompatible
 
@@ -188,14 +220,14 @@ vnoremap <F1> :set invfullscreen<CR>
 " Textmate holdouts
 
 " Formatting
-map <leader>q gqip
+" map <leader>q gqip
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
 " Uncomment this to enable by default:
 " set list " To enable by default
 " Or use your leader key + l to toggle on/off
-map <leader>l :set list!<CR> " Toggle tabs and EOL
+" map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

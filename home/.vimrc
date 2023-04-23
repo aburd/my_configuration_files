@@ -12,6 +12,9 @@ noremap <leader>d :w<CR>
 tnoremap <Esc> <C-\><C-n>
 imap <tab> <tab>
 
+" Jump
+noremap <Bslash>j :call CocAction('jumpDefinition', 'drop')<CR>
+
 " Splitpane shortcuts
 noremap <leader>v :vsp<CR>
 noremap <leader>h :sp<CR>
@@ -57,7 +60,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " CoC
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph']
 
 call plug#begin() 
 " The default plugin directory will be as follows: 

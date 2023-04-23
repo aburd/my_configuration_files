@@ -74,7 +74,7 @@ alias copy="xsel"
 
 # Not in vim 
 if [ -z "$VIMRUNTIME" ]; then
-  neofetch 
+  neofetch --color_blocks off 
 fi
 
 

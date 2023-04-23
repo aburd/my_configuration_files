@@ -123,8 +123,6 @@ Plug 'mxsdev/nvim-dap-vscode-js'
 
 call plug#end()
 
-<<<<<<< HEAD
-=======
 " Color scheme (terminal)
 if exists('+termguicolors')
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -136,7 +134,6 @@ colorscheme nightfox
 " Uncomment this if your theme doesn't have transparency, but you want it to
 " hi Normal guibg=NONE ctermbg=NONE
 
->>>>>>> efe8720 (various)
 " Don't try to be vi compatible
 set nocompatible
 

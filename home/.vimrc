@@ -56,7 +56,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " CoC
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-lua']
 
 call plug#begin() 
 " The default plugin directory will be as follows: 
@@ -226,10 +226,6 @@ set listchars=tab:▸\ ,eol:¬
 " Or use your leader key + l to toggle on/off
 " map <leader>l :set list!<CR> " Toggle tabs and EOL
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
 let g:rustfmt_autosave = 1
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')

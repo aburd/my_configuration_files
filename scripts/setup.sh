@@ -3,6 +3,29 @@
 SCRIPT=$(realpath "$0");
 SCRIPT_PATH=$(dirname "$SCRIPT");
 PJT_PATH=$(dirname $SCRIPT_PATH);
+IS_HELP='false'
+IS_ASK='false'
+
+while getopts ':a,:h' flag
+do
+    case "${flag}" in
+        a) IS_ASK='true';;
+        h) IS_HELP='true';;
+    esac
+done
+
+print_help()
+{
+  echo "
+    Setup script to get your configuration setup on a nix-system.
+
+    Flags:
+      -a: Ask for overwrites instead of skipping.
+      -h: Display this message.
+  "
+  exit
+}
+
 
 print_div()
 {
@@ -33,14 +56,17 @@ checkFileAndLink()
   writeFile=true;
   echo "Checking $targetPath";
   if [ -e "$targetPath" ]; then
-    while true; do
-        read -p "$filename already exists. Overwrite, Yn?" yn
-        case $yn in
-            [Yy]* ) writeFile=true; break;;
-            [Nn]* ) writeFile=false; break;;
-            * ) echo "Please answer yes or no.";;
-        esac
-    done
+    writeFile=false
+    if "$IS_ASK"; then
+      while true; do
+          read -p "$filename already exists. Overwrite, Yn?" yn
+          case $yn in
+              [Yy]* ) writeFile=true; break;;
+              [Nn]* ) break;;
+              * ) echo "Please answer yes or no.";;
+          esac
+      done
+    fi
   fi
 
   if [ "$writeFile" = true ]; then
@@ -49,6 +75,11 @@ checkFileAndLink()
   fi
   echo " ";
 }
+
+
+if "$IS_HELP"; then
+  print_help
+fi
 
 print_header "Hi, $USER. I'm here to help set up your PC's configuration files.";
 

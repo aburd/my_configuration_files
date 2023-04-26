@@ -18,10 +18,6 @@ noremap <Bslash>j :call CocAction('jumpDefinition', 'drop')<CR>
 " Splitpane shortcuts
 noremap <leader>v :vsp<CR>
 noremap <leader>h :sp<CR>
-noremap <C-L> <C-W>l
-noremap <C-K> <C-W>k
-noremap <C-J> <C-W>j
-noremap <C-H> <C-W>h
 " Splitpane Size
 nnoremap <C-q>h :vertical resize +5<CR>
 nnoremap <C-q>l :vertical resize -5<CR>
@@ -73,6 +69,7 @@ call plug#begin()
 
 " Any valid git URL is allowed
 " Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'lambdalisue/suda.vim'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rust-lang/rust.vim'

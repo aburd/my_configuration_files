@@ -8,7 +8,10 @@
     "css",
     "markdown",
     "json",
-    "clojure"
+    "clojure",
+    "typescript",
+    "javascript",
+    "rust"
   ],
   "Lua.diagnostics.globals": [
     "vim"

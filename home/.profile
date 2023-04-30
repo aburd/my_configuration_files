@@ -77,6 +77,8 @@ if [ -z "$VIMRUNTIME" ]; then
   neofetch --color_blocks off 
 fi
 
+# FZF
+FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

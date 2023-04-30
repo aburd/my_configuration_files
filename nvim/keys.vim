@@ -39,6 +39,7 @@ map <leader>r :NERDTreeFind<cr>
 "" Fzf
 noremap <C-p> :GFiles<CR>
 nnoremap <C-u> :Files<CR>
+nnoremap <C-i> :Rg<CR>
 
 " Coc
 " Remap keys for gotos

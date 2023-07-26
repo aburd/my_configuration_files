@@ -66,6 +66,7 @@ alias gc="git commit -m"
 alias gcb="git checkout -b" 
 alias gl="git log" 
 alias ga="git add ." 
+alias gg="git grep -n"
 
 # There are a couple tools capable of writing to the clipboard; I use xsel. 
 # It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:
@@ -87,3 +88,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # opam configuration
 [[ ! -r /home/aburd/.opam/opam-init/init.zsh ]] || source /home/aburd/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi

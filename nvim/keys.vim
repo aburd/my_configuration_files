@@ -27,6 +27,8 @@ noremap <leader>t :tabedit<CR>
 nnoremap <leader>q :tabclose<CR>
 nnoremap <leader>j :tabprevious<CR>
 noremap <leader>k :tabnext<CR>
+nnoremap <leader>m :tabm -1<CR>
+nnoremap <leader>, :tabm +1<CR>
 
 " Highlighting
 noremap <C-m> :noh<CR>
@@ -40,6 +42,8 @@ map <leader>r :NERDTreeFind<cr>
 noremap <C-p> :GFiles<CR>
 nnoremap <C-u> :Files<CR>
 nnoremap <C-i> :Rg<CR>
+nnoremap <C-b> :Buffers<CR>
+nnoremap <C-s> :CocCommand swagger.render<CR>
 
 " Coc
 " Remap keys for gotos

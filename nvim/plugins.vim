@@ -33,6 +33,7 @@ Plug 'heavenshell/vim-jsdoc', {
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nicwest/vim-camelsnek'
+Plug 'samoshkin/vim-mergetool'
 
 " Markdown
 " If you have nodejs and yarn

@@ -14,17 +14,17 @@
     "rust"
   ],
   "Lua.diagnostics.globals": [
-    "vim"
+    "vim",
+    "clojure",
+    "typescript"
   ],
+  "prettier.requireConfig": true,
   "coc.preferences.jumpCommand": "tabe",
   "diagnostic-languageserver.linters": {
     "clj_kondo_lint": {
       "command": "clj-kondo",
       "debounce": 100,
-      "args": [
-        "--lint",
-        "%filepath"
-      ],
+      "args": ["--lint", "%filepath"],
       "offsetLine": 0,
       "offsetColumn": 0,
       "sourceName": "clj-kondo",
@@ -51,28 +51,20 @@
   "languageserver": {
     "ocaml": {
       "command": "ocamllsp",
-      "filetypes": [
-        "ml"
-      ]
+      "filetypes": ["ml"]
     },
     "flow": {
       "command": "flow",
-      "args": [
-        "lsp"
-      ],
-      "filetypes": [
-        "javascript",
-        "javascriptreact"
-      ],
+      "args": ["lsp"],
+      "filetypes": ["javascript", "javascriptreact"],
       "initializationOptions": {},
       "requireRootPattern": 1,
       "settings": {},
-      "rootPatterns": [
-        ".flowconfig"
-      ]
+      "rootPatterns": [".flowconfig"]
     }
   },
   "eslint": {
-    "autoFixOnSave": true
+    "autoFixOnSave": true,
+    "workingDirectories": [{ "mode": "auto" }]
   }
 }

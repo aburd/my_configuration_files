@@ -9,6 +9,9 @@ noremap <leader>d :w<CR>
 tnoremap <Esc> <C-\><C-n>
 imap <tab> <tab>
 
+" Git
+noremap <leader>g :LazyGit<CR>
+
 " Splitpane shortcuts
 noremap <leader>v :vsp<CR>
 noremap <leader>h :sp<CR>

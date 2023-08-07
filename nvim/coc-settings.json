@@ -10,7 +10,6 @@
     "json",
     "clojure",
     "typescript",
-    "javascript",
     "rust"
   ],
   "Lua.diagnostics.globals": [

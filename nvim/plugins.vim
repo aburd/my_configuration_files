@@ -10,7 +10,7 @@ call plug#begin()
 " Any valid git URL is allowed
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'lambdalisue/suda.vim'
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+Plug 'f-person/git-blame.nvim'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'

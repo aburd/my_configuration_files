@@ -53,3 +53,13 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Jump
 nnoremap <Bslash>j :call CocActionAsync('jumpDefinition')<CR>
+
+" Git-Blame-Nvim
+nnoremap <C-g> :GitBlameToggle<CR>
+
+" Jest
+"" Run jest for current file
+nnoremap <leader>lf :call CocAction('runCommand', 'jest.fileTest', ['%'])<CR>
+
+" Run jest for current test
+nnoremap <leader>ls :call CocAction('runCommand', 'jest.singleTest')<CR>

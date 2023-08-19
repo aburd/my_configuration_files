@@ -1,3 +1,4 @@
+
 call plug#begin() 
 " The default plugin directory will be as follows: 
 " "   - Vim (Linux/macOS): '~/.vim/plugged' 
@@ -57,5 +58,8 @@ Plug 'eraserhd/parinfer-rust'
 " Node
 Plug 'mfussenegger/nvim-dap'
 Plug 'mxsdev/nvim-dap-vscode-js'
+
+" Personal
+Plug '~/aarons_utils'
 
 call plug#end()

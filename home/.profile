@@ -67,6 +67,7 @@ alias gcb="git checkout -b"
 alias gl="git log" 
 alias ga="git add ." 
 alias gg="git grep -n"
+alias g="lazygit"
 
 # There are a couple tools capable of writing to the clipboard; I use xsel. 
 # It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:

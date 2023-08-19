@@ -81,3 +81,8 @@ install_fonts()
     echo "Error: Provide a font directory"
   fi
 }
+
+bats_all() {
+  BATS_RUN_SKIPPED=true command bats *.bats
+}
+

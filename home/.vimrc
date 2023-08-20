@@ -2,7 +2,7 @@ let g:airline_theme='wombat'
 colorscheme nightfox
 
 " CoC
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-lua', 'coc-jest']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-lua', 'coc-jest', 'coc-prettier']
 
 let g:mergetool_layout = 'mr'
 let g:mergetool_prefer_revision = 'local'

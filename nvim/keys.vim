@@ -68,4 +68,4 @@ nnoremap <leader>lf :call CocAction('runCommand', 'jest.fileTest', ['%'])<CR>
 nnoremap <leader>ls :call CocAction('runCommand', 'jest.singleTest')<CR>
 
 " Aaron's Utils
-nnoremap <Bslash>td :DeleteAllOtherTabs<CR>
+nnoremap <Bslash> :DeleteAllOtherTabs<CR>

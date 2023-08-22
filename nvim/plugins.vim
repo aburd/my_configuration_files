@@ -22,8 +22,6 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'tpope/vim-abolish'
 Plug 'dag/vim-fish'
 Plug 'leafgarland/typescript-vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
@@ -35,6 +33,13 @@ Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nicwest/vim-camelsnek'
 Plug 'samoshkin/vim-mergetool'
+
+" Fuzzy Finder
+Plug 'nvim-lua/plenary.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Markdown
 " If you have nodejs and yarn

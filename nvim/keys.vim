@@ -42,10 +42,13 @@ let NERDTreeShowHidden=1
 map <leader>r :NERDTreeFind<cr>
 
 "" Fzf
-noremap <C-p> :GFiles<CR>
-nnoremap <C-u> :Files<CR>
-nnoremap <C-i> :Rg<CR>
+noremap <C-p> :Telescope find_files<CR>
+nnoremap <C-i> :Telescope live_grep<CR>
+nnoremap <C-o> :Telescope buffers<CR>
+nnoremap <C-u> :Telescope help_tags<CR>
 nnoremap <C-b> :Buffers<CR>
+
+" Swagger
 nnoremap <C-s> :CocCommand swagger.render<CR>
 
 " Coc
@@ -54,6 +57,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
 " Jump
 nnoremap <Bslash>j :call CocActionAsync('jumpDefinition')<CR>
 

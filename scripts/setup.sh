@@ -93,23 +93,11 @@ for f in home/.*;
 do
   checkFileAndLink "$f" $HOME;
 done
-# Link all files in nvim 
-NVIM_DIR="$HOME/.config/nvim";
-if ! [ -d "$NVIM_DIR" ]; then
-  echo "$NVIM_DIR directory does not exist.";
-  while true; do
-      read -p "Would you like to create this directory? Yn." yn
-      case $yn in
-          [Yy]* ) mkdir -p "$NVIM_DIR"; break;;
-          [Nn]* ) break;;
-          * ) echo "Please answer yes or no.";;
-      esac
-  done
-fi
-for f in nvim/*;
-do
-  checkFileAndLink "$f" "$HOME/.config/nvim";
-done
+
+# Link nvim directory 
+mkdir -p "$HOME/.config"
+checkFileAndLink nvim "$HOME/.config";
+
 # systemd
 for f in services/*;
 do

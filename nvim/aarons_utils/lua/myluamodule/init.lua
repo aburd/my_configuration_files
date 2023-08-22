@@ -31,6 +31,7 @@ end
 
 local function delete_tabpage(tabpage)
   local window = vim.api.nvim_tabpage_get_win(tabpage)
+  -- TODO: should I also save the windows before deleting them?
   vim.api.nvim_win_close(window, false)
 end
 

@@ -11,7 +11,8 @@
     "clojure",
     "typescript",
     "javascript",
-    "rust"
+    "rust",
+    "html"
   ],
   "Lua.diagnostics.globals": [
     "vim",

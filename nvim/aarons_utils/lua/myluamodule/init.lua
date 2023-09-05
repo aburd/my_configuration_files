@@ -16,18 +16,18 @@ end
 -- a function called `connect` in my module, I would be more concerned. So I
 -- normally try to follow the pattern demonstrated by `local_lua_function`. The
 -- right choice might depend on your circumstances.
-function global_lua_function()
-    print "nvim-example-lua-plugin.myluamodule.init global_lua_function: hello"
-end
+-- function global_lua_function()
+--     print "nvim-example-lua-plugin.myluamodule.init global_lua_function: hello"
+-- end
 
 
 -- This function is qualified with `local`, so it's visibility is restricted to
 -- this file. It is exported below in the return value from this module using a
 -- Lua pattern that allows symbols to be selectively exported from a module by
 -- adding them to a table that is returned from the file.
-local function local_lua_function()
-    print "nvim-example-lua-plugin.myluamodule.init local_lua_function: hello"
-end
+-- local function local_lua_function()
+--     print "nvim-example-lua-plugin.myluamodule.init local_lua_function: hello"
+-- end
 
 local function delete_tabpage(tabpage)
   local window = vim.api.nvim_tabpage_get_win(tabpage)
@@ -49,7 +49,7 @@ vim.api.nvim_create_user_command(
 
 -- This is a duplicate of the keymap created in the VimL file, demonstrating how to create a
 -- keymapping in Lua.
-vim.keymap.set('n', 'M-C-G', local_lua_function, {desc = 'Run local_lua_function.', remap = false})
+-- vim.keymap.set('n', 'M-C-G', local_lua_function, {desc = 'Run local_lua_function.', remap = false})
 
 -- Create a named autocmd group for autocmds so that if this file/plugin gets reloaded, the existing
 -- autocmd group will be cleared, and autocmds will be recreated, rather than being duplicated.
@@ -77,5 +77,5 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 --    require'myluamodule'.setup({p1 = "value1"})
 return {
     setup = setup,
-    local_lua_function = local_lua_function,
+    -- local_lua_function = local_lua_function,
 }

@@ -32,19 +32,43 @@ end
 local function delete_tabpage(tabpage)
   local window = vim.api.nvim_tabpage_get_win(tabpage)
   -- TODO: should I also save the windows before deleting them?
-  vim.api.nvim_win_close(window, false)
+  vim.api.nvim_win_close(window, true)
+end
+
+local function delete_other_tabs()
+  local current = vim.api.nvim_get_current_tabpage()
+
+  for i, page in ipairs(vim.api.nvim_list_tabpages()) do
+    if page ~= current then
+      delete_tabpage(page)
+    end
+  end
+
+  -- I have no idea why but nvim sometimes leaves tabs behind that have
+  -- to get cleaned up
+  local tabs = vim.api.nvim_list_tabpages()
+  if #tabs > 1 then
+    delete_other_tabs()
+  end
 end
 
 -- Create a command, ':DoTheThing'
 vim.api.nvim_create_user_command(
-    'DeleteAllOtherTabs',
-    function(input)
-      local current = vim.api.nvim_get_current_tabpage()
-        for i, page in ipairs(vim.api.nvim_list_tabpages()) do
-          if page ~= current then delete_tabpage(page) end
-        end
-    end,
-    {bang = true, desc = 'a new command to do the thing'}
+  'DeleteAllOtherTabs',
+  function(input)
+    delete_other_tabs()
+  end,
+  { bang = true, desc = 'a new command to do the thing' }
+)
+
+vim.api.nvim_create_user_command(
+  'CurrentTab',
+  function(input)
+    local current = vim.api.nvim_get_current_tabpage()
+
+    print('current page: ', vim.inspect(current))
+  end,
+  { bang = true, desc = 'a new command to do the thing' }
 )
 
 -- This is a duplicate of the keymap created in the VimL file, demonstrating how to create a
@@ -53,7 +77,7 @@ vim.api.nvim_create_user_command(
 
 -- Create a named autocmd group for autocmds so that if this file/plugin gets reloaded, the existing
 -- autocmd group will be cleared, and autocmds will be recreated, rather than being duplicated.
-local augroup = vim.api.nvim_create_augroup('highlight_cmds', {clear = true})
+local augroup = vim.api.nvim_create_augroup('highlight_cmds', { clear = true })
 
 vim.api.nvim_create_autocmd('ColorScheme', {
   pattern = 'rubber',
@@ -76,6 +100,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 --    myluamodule.local_lua_function()
 --    require'myluamodule'.setup({p1 = "value1"})
 return {
-    setup = setup,
-    -- local_lua_function = local_lua_function,
+  setup = setup,
+  -- local_lua_function = local_lua_function,
 }

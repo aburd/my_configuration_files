@@ -87,3 +87,6 @@ lua require'myluamodule'.setup({p1 = "value1"})
 " Lua code can be defined in other files, rather than just `lua.lua` or
 " `init.lua`. Here, Lua code is defined in `lua\myluamodule\definestuff.lua`.
 " lua require("myluamodule.definestuff").show_stuff()
+
+" Aaron's Utils
+nnoremap <Bslash> :DeleteAllOtherTabs<CR>

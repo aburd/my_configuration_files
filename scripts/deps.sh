@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 bin_exists()
 {
@@ -25,7 +25,7 @@ install()
   fi
 
   if bin_exists apt; then
-    apt install "$pkg" 
+    sudo apt install "$pkg" -y
     return;
   fi
 
@@ -72,23 +72,18 @@ main()
   MY_DEPS="$(cat ./scripts/my_deps.txt | sed -r '/#|^\s*$/d')"
   emphasize "This script will attempt to get you up and running with your dependencies"
   emphasize "You can update dependencies at $(pwd)/scripts/my_deps.txt" 
+
   for dep in $MY_DEPS; do
     install "$dep"
   done
-  if bin_exists xremap; then 
-    echo "xremap already exists, skipping"
-  else
-    install_xremap
-  fi
-  # kickoff
-  if bin_exists kickoff; then 
-    echo "kickoff already exists, skipping"
-  else
-    cargo install kickoff
-  fi
 
-  install_ohmyzsh
-  install_lazygit
+  ! bin_exists xremap && install_xremap || echo "xremap already exists, skipping"
+
+  ! bin_exists kickoff && cargo install kickoff || echo "kickoff already exists, skipping"
+
+  [[ ! -d "$HOME/.oh-my-zsh" ]] && install_ohmyzsh || echo "oh my zsh already installed"
+
+  ! bin_exists lazygit && install_lazygit || echo "lazygit exists, skipping"
 }
 
-main()
+main

@@ -6,6 +6,10 @@ i3
 zsh
 tmux
 
+# util
+ripgrep
+nfs-kernel-server
+
 # term
 curl
 ranger
@@ -24,7 +28,7 @@ brightnessctl
 # gui
 flameshot
 nm-tray
-dolphin
+thunar
 wdisplays
 wofi
 wdisplays

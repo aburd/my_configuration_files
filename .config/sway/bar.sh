@@ -46,21 +46,14 @@ battery_emoji()
   if [ "$status" = "Charging" ]; then
     echo "$bat_charging_emoji"
   else
-    if [ "$bat" -lt 15 ]; then
-      echo "$bat_low_emoji" 
-    else
-      echo "$bat_high_emoji"
-    fi
+    [[ "$bat" -lt 15 ]] && echo "$bat_low_emoji" || echo "$bat_high_emoji"
   fi
 }
 
 is_muted()
 {
   amixer get Master | grep '\[off\]'
-  if [ $? = 0 ]; then
-    return 0
-  fi
-  return 1
+  [[ $? = 0 ]] && return 0 || return 1
 }
 
 bar

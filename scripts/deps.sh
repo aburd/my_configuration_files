@@ -66,6 +66,11 @@ install_lazygit()
   sudo install lazygit /usr/local/bin
 }
 
+install_wofi_emoji()
+{
+  git clone git@github.com:Zeioth/wofi-emoji.git "$HOME/code/wofi-emoji"
+  sudo ln -s "$HOME/code/wofi-emoji/wofi-emoji" /usr/local/bin/wofi-emoji
+}
 
 main()
 {
@@ -84,6 +89,8 @@ main()
   [[ ! -d "$HOME/.oh-my-zsh" ]] && install_ohmyzsh || echo "oh my zsh already installed"
 
   ! bin_exists lazygit && install_lazygit || echo "lazygit exists, skipping"
+
+  ! bin_exists wofi-emoji && install_wofi_emoji || echo "wofi-emoji exists, skipping"
 }
 
 main

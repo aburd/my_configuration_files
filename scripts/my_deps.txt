@@ -44,6 +44,5 @@ wofi
 wdisplays
 
 # language
-fcitx
-fcitx-config-common
-fcitx-mozc
+fcitx5
+fcitx5-mozc

@@ -1,7 +1,17 @@
 # system
+build-essential
+libfreetype6-dev
+libfontconfig1-dev
+pkg-config
+libxcb-xfixes0-dev
+libxkbcommon-dev
+python3
+xclip
+cmake
 git
 ripgrep
 nfs-kernel-server
+pkg-config
 
 # wm
 sway

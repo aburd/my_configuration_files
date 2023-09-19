@@ -39,6 +39,7 @@ fi
 export PATH="~/.local/bin:$PATH"
 export PATH="/home/aburd/.local/bin/nvim-linux64/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/sbin
 export PATH="$HOME/.local/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"

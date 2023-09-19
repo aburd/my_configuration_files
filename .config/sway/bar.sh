@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 BAT_PATH="/sys/class/power_supply/BAT1"
 

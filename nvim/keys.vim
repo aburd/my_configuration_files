@@ -21,6 +21,15 @@ nnoremap <C-q>l :vertical resize -5<CR>
 nnoremap <C-q>j :resize +5<CR>
 nnoremap <C-q>k :resize -5<CR>
 
+"Clipboard  " relative path (src/foo.txt)
+nnoremap <leader>cf :let @+=expand("%")<CR>
+" absolute path (/something/src/foo.txt)
+nnoremap <leader>cF :let @+=expand("%:p")<CR>
+" filename (foo.txt)
+nnoremap <leader>cn :let @+=expand("%:t")<CR>
+" directory name (/something/src)
+nnoremap <leader>cd :let @+=expand("%:p:h")<CR>
+
 " Esc
 imap jk <Esc>
 imap kj <Esc>

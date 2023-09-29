@@ -78,10 +78,11 @@ alias g="lazygit"
 # $ echo "Some Text" | xsel -i -b
 alias copy="xsel"
 
-# Not in vim 
-if [ -z "$VIMRUNTIME" ]; then
-  neofetch --color_blocks off 
-fi
+# TODO: make configurable
+# Not in vim
+# if [ -z "$VIMRUNTIME"]; then
+#   neofetch --color_blocks off 
+# fi
 
 # FZF
 FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'

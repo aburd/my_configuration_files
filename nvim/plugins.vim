@@ -41,9 +41,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+" Marks
+Plug 'chentoast/marks.nvim'
+
 " Markdown
 " If you have nodejs and yarn
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'iamcco/markdown-preview.nvim'
+" must call afterward
+" call mkdp#util#install()
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

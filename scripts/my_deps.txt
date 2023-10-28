@@ -42,6 +42,7 @@ thunar
 wdisplays
 wofi
 wdisplays
+peek
 
 # language
 fcitx5

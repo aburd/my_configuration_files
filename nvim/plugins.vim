@@ -38,7 +38,7 @@ Plug 'samoshkin/vim-mergetool'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Marks
@@ -63,7 +63,8 @@ Plug 'Olical/conjure', { 'tag': 'v4.37.0' }
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
-Plug 'eraserhd/parinfer-rust'
+Plug 'eraserhd/parinfer-rust', {'do':
+        \  'cargo build --release'}
 
 " Node
 Plug 'mfussenegger/nvim-dap'

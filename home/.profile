@@ -17,6 +17,8 @@ export QT_IM_MODULE=fcitx
 # Desktop
 export XDG_CURRENT_DESKTOP=sway
 
+export PICO_SDK_PATH=/home/aburd/code/pico-c/pico/pico-sdk
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -41,6 +43,7 @@ export PATH="/home/aburd/.local/bin/nvim-linux64/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/usr/sbin
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin/jdk-21.0.1+12/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -72,6 +75,7 @@ alias gl="git log"
 alias ga="git add ." 
 alias gg="git grep -n"
 alias g="lazygit"
+alias audio="pavucontrol"
 
 # There are a couple tools capable of writing to the clipboard; I use xsel. 
 # It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:

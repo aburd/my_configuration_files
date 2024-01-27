@@ -1,4 +1,5 @@
 {
+  "coc.preferences.extensionUpdateCheck": "daily",
   "rust-analyzer": {
     "server": {
       "path": "~/.local/bin/rust-analyzer"

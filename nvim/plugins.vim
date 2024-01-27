@@ -59,7 +59,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'EdenEast/nightfox.nvim'
 
 " Clojure
-Plug 'Olical/conjure', { 'tag': 'v4.37.0' }
+Plug 'Olical/conjure'
+Plug 'm00qek/baleia.nvim', { 'tag': 'v1.4.0' }
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'

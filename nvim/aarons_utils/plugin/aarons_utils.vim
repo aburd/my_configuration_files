@@ -89,4 +89,4 @@ lua require'myluamodule'.setup({p1 = "value1"})
 " lua require("myluamodule.definestuff").show_stuff()
 
 " Aaron's Utils
-nnoremap <Bslash> :DeleteAllOtherTabs<CR>
+nnoremap <Bslash>d :DeleteAllOtherTabs<CR>

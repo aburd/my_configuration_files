@@ -67,6 +67,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Coc Typescript
+nnoremap <Bslash>t :CocCommand tsserver.chooseVersion<CR>
+
 " Jump
 nnoremap <Bslash>j :call CocActionAsync('jumpDefinition')<CR>
 

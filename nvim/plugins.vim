@@ -34,6 +34,10 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'nicwest/vim-camelsnek'
 Plug 'samoshkin/vim-mergetool'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
+
 " Fuzzy Finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

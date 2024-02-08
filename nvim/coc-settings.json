@@ -11,6 +11,7 @@
     "json",
     "clojure",
     "typescript",
+    "typescriptreact",
     "javascript",
     "rust",
     "html"
@@ -68,5 +69,6 @@
   "eslint": {
     "autoFixOnSave": true,
     "workingDirectories": [{ "mode": "auto" }]
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }

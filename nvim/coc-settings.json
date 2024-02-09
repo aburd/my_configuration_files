@@ -55,15 +55,6 @@
     "ocaml": {
       "command": "ocamllsp",
       "filetypes": ["ml"]
-    },
-    "flow": {
-      "command": "flow",
-      "args": ["lsp"],
-      "filetypes": ["javascript", "javascriptreact"],
-      "initializationOptions": {},
-      "requireRootPattern": 1,
-      "settings": {},
-      "rootPatterns": [".flowconfig"]
     }
   },
   "eslint": {

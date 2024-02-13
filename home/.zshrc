@@ -119,3 +119,10 @@ esac
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+which jenv > /dev/null
+if [ $? -eq 0 ]; then
+  export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
+  export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
+fi

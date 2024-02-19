@@ -12,6 +12,7 @@ git
 ripgrep
 nfs-kernel-server
 pkg-config
+stow
 
 # wm
 sway

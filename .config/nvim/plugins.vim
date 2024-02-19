@@ -34,6 +34,10 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'nicwest/vim-camelsnek'
 Plug 'samoshkin/vim-mergetool'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
+
 " Fuzzy Finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -64,7 +68,8 @@ Plug 'm00qek/baleia.nvim', { 'tag': 'v1.4.0' }
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
-Plug 'eraserhd/parinfer-rust'
+Plug 'eraserhd/parinfer-rust', {'do':
+        \  'cargo build --release'}
 
 " Node
 Plug 'mfussenegger/nvim-dap'

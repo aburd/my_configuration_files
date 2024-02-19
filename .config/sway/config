@@ -32,8 +32,12 @@ set $menu kickoff
 # Example configuration:
 #
 #  man 5 sway-output 
+# background $HOME/.config/sway/bgs/purple_green_fractal.png fill 
+  # background /usr/share/wallpapers/DebianTheme/contents/images/1600x1200.svg fill
+
+exec swaybg -i /usr/share/wallpapers/DebianTheme/contents/images/1280x1024.svg -m fill
+
 output eDP-1 {
-  background $HOME/.config/sway/bgs/purple_green_fractal.png fill 
   resolution 2256x1504 
   position 2256,0
   scale 1.8

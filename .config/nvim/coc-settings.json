@@ -1,4 +1,5 @@
 {
+  "coc.preferences.extensionUpdateCheck": "daily",
   "rust-analyzer": {
     "server": {
       "path": "~/.local/bin/rust-analyzer"
@@ -10,6 +11,7 @@
     "json",
     "clojure",
     "typescript",
+    "typescriptreact",
     "javascript",
     "rust",
     "html"
@@ -53,19 +55,11 @@
     "ocaml": {
       "command": "ocamllsp",
       "filetypes": ["ml"]
-    },
-    "flow": {
-      "command": "flow",
-      "args": ["lsp"],
-      "filetypes": ["javascript", "javascriptreact"],
-      "initializationOptions": {},
-      "requireRootPattern": 1,
-      "settings": {},
-      "rootPatterns": [".flowconfig"]
     }
   },
   "eslint": {
     "autoFixOnSave": true,
     "workingDirectories": [{ "mode": "auto" }]
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }

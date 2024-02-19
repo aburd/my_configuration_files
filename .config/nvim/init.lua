@@ -10,5 +10,6 @@ vim.cmd.source("~/.config/nvim/keys.vim")
 
 -- configs
 vim.cmd.source("~/.config/nvim/configs/conjure.vim")
+-- vim.cmd.source("~/.config/nvim/configs/baleia.vim")
 vim.cmd.source("~/.config/nvim/configs/fzf.lua")
 vim.cmd.source("~/.config/nvim/configs/marks.nvim.lua")

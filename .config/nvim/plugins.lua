@@ -37,6 +37,9 @@ local plugins = {
   'SirVer/ultisnips',
   'mlaursen/vim-react-snippets',
 
+  -- find replace
+  'nvim-pack/nvim-spectre',
+
   -- Fuzzy Finder
   'nvim-lua/plenary.nvim',
   'junegunn/fzf',

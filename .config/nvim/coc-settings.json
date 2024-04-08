@@ -5,11 +5,13 @@
       "path": "~/.local/bin/rust-analyzer"
     }
   },
+  "[clojure]": {
+    "coc.preferences.formatOnSave": true
+  },
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
     "json",
-    "clojure",
     "typescript",
     "typescriptreact",
     "javascript",

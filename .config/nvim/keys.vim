@@ -46,9 +46,9 @@ nnoremap <leader>, :tabm +1<CR>
 noremap <C-m> :noh<CR>
 
 " NERDTree
-nmap <F6> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-map <leader>r :NERDTreeFind<cr>
+nmap <F6> :Neotree toggle reveal<CR>
+" let NERDTreeShowHidden=1
+map <leader>r :Neotree reveal=true<cr>
 
 "" Fzf
 noremap <C-p> :Telescope find_files<CR>

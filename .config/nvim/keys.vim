@@ -39,23 +39,28 @@ noremap <leader>t :tabedit<CR>
 nnoremap <leader>q :tabclose<CR>
 nnoremap <leader>j :tabprevious<CR>
 noremap <leader>k :tabnext<CR>
-nnoremap <leader>m :tabm -1<CR>
-nnoremap <leader>, :tabm +1<CR>
+nnoremap <leader>u :tabm -1<CR>
+nnoremap <leader>i :tabm +1<CR>
 
 " Highlighting
 noremap <C-m> :noh<CR>
 
-" NERDTree
-nmap <F6> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-map <leader>r :NERDTreeFind<cr>
+" Tree
+nmap <F6> :Neotree toggle<CR>
+map <leader><space> :Neotree reveal<cr>
+" nmap <F6> :NERDTreeToggle<CR>
+" let NERDTreeShowHidden=1
+" map <leader>r :NERDTreeFind<cr>
 
 "" Fzf
 noremap <C-p> :Telescope find_files<CR>
 nnoremap <C-i> :Telescope live_grep<CR>
 nnoremap <C-o> :Telescope buffers<CR>
 nnoremap <C-u> :Telescope help_tags<CR>
-nnoremap <C-b> :Buffers<CR>
+
+"" Marks
+
+nnoremap <C-;> :MarksListGlobal<CR>
 
 " Swagger
 nnoremap <C-s> :CocCommand swagger.render<CR>

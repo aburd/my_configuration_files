@@ -73,6 +73,18 @@ local plugins = {
   'clojure-vim/vim-jack-in',
   'radenling/vim-dispatch-neovim',
   { 'eraserhd/parinfer-rust', build = 'cargo build --release'},
+
+  -- Github
+ 'github/copilot.vim',
+
+  -- Personal
+ -- '~/aarons_utils',
+
+  -- Iced
+  { 'guns/vim-sexp', ft = { 'clojure', 'clj', 'cljs' } },
+  { 'liquidz/vim-iced', ft = { 'clojure', 'clj', 'cljs' } },
+
+  'tani/dmacro.nvim',
 }
 
 local opts = {

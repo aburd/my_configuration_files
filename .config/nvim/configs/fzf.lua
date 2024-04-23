@@ -31,6 +31,14 @@ telescope.setup {
 			-- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
 			find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 		},
+    buffers = {
+      sort_lastused = true,
+      mappings = {
+        i = {
+          ["<c-d>"] = "delete_buffer",
+        }
+      }
+    }
 	},
 }
 -- To get fzf loaded and working with telescope, you need to call

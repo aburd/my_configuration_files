@@ -2,7 +2,7 @@ let g:airline_theme='wombat'
 colorscheme nightfox
 
 " CoC
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-lua', 'coc-jest', 'coc-prettier', 'coc-html', 'coc-snippets', 'coc-clojure', 'coc-clojure', 'coc-diagnostic']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-lua', 'coc-jest', 'coc-prettier', 'coc-html', 'coc-snippets', 'coc-clojure', 'coc-diagnostic', 'coc-eslint']
 
 let g:mergetool_layout = 'mr'
 let g:mergetool_prefer_revision = 'local'
@@ -123,4 +123,18 @@ function! ToggleSpellCheck()
   endif
 endfunction
 
+" use firefox with markdown preview
+function OpenMarkdownPreview (url)
+     " execute "silent ! pidof firefox || firefox & sleep 1 && firefox " . a:url
+     execute "silent ! /Applications/Firefox.app/Contents/MacOS/firefox " . a:url
+endfunction
+
 nnoremap <silent> <Leader>S :call ToggleSpellCheck()<CR>
+
+let system_type = trim(system('uname'))
+if system_type == 'Darwin'
+  let g:python3_host_prog = '/usr/bin/python3'
+
+  let g:mkdp_browserfunc = 'OpenMarkdownPreview'
+endif
+

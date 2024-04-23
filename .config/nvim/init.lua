@@ -15,7 +15,6 @@ vim.cmd.source("~/.config/nvim/configs/marks.nvim.lua")
 -- vim.cmd.source("~/.config/nvim/configs/dmacro.nvim.lua")
 vim.cmd.source("~/.config/nvim/configs/vim-iced.vim")
 vim.cmd.source("~/.config/nvim/configs/neotree.nvim.lua")
-vim.cmd.source("~/.config/nvim/configs/spectre.nvim.lua")
 vim.cmd.source("~/.config/nvim/configs/oil.nvim.lua")
 
 vim.cmd.source("~/.config/nvim/keys.vim")

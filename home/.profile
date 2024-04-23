@@ -18,6 +18,7 @@ export QT_IM_MODULE=fcitx
 export XDG_CURRENT_DESKTOP=sway
 
 export PICO_SDK_PATH=/home/aburd/code/pico-c/pico/pico-sdk
+export PATH=$PATH:/Users/aburd/.local/share/nvim/plugged/vim-iced/bin
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -44,10 +45,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/usr/sbin
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/jdk-21.0.1+12/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias bat=batcat
 alias ll="exa -la"

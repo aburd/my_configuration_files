@@ -1,0 +1,6 @@
+vim.cmd.source("~/.config/nvim/lua/configs/conjure.vim")
+vim.cmd.source("~/.config/nvim/lua/configs/vim-iced.vim")
+require("configs.fzf")
+require("configs.marks")
+require("configs.neotree")
+require("configs.oil")

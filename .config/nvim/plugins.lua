@@ -18,10 +18,29 @@ local plugins = {
   'rust-lang/rust.vim',
   { 'neoclide/coc.nvim', branch = 'release' },
   'preservim/nerdtree',
+  {
+      "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+      }
+  },
   'jasonccox/vim-wayland-clipboard',
   'tpope/vim-surround',
   'tpope/vim-commentary',
-  'kdheepak/lazygit.nvim',
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies =  {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim"
+    },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
+  },
   'tpope/vim-abolish',
   'dag/vim-fish',
   'leafgarland/typescript-vim',
@@ -32,6 +51,7 @@ local plugins = {
   'editorconfig/editorconfig-vim',
   'nicwest/vim-camelsnek',
   'samoshkin/vim-mergetool',
+  'stevearc/oil.nvim',
 
   -- Snippets
   'SirVer/ultisnips',
@@ -67,24 +87,41 @@ local plugins = {
   },
 
   -- Clojure
-  'Olical/conjure',
+  -- {
+  --   'Olical/conjure',
+  --    ft = {'clojure'},
+  -- },
   { 'm00qek/baleia.nvim', tag = 'v1.4.0' },
   'tpope/vim-dispatch',
   'clojure-vim/vim-jack-in',
   'radenling/vim-dispatch-neovim',
   { 'eraserhd/parinfer-rust', build = 'cargo build --release'},
 
-  -- Github
- 'github/copilot.vim',
-
   -- Personal
  -- '~/aarons_utils',
 
   -- Iced
-  { 'guns/vim-sexp', ft = { 'clojure', 'clj', 'cljs' } },
-  { 'liquidz/vim-iced', ft = { 'clojure', 'clj', 'cljs' } },
+  { 'guns/vim-sexp', ft = {'clojure'} },
 
-  'tani/dmacro.nvim',
+  {
+    'liquidz/vim-iced',
+    ft = {'clojure'},
+    config = function()
+      vim.g.iced_enable_default_key_mappings = true
+      vim.g.iced_default_key_mapping_leader = '<LocalLeader>'
+    end,
+    keys = {
+      {
+        "<leader>mn", "<cmd>IcedJumpToNextSign<cr>", desc = "NeoTree",
+      },
+      {
+        "<leader>mN", "<cmd>IcedJumpToPrevSign<cr>", desc = "NeoTree",
+      },
+      {
+        "<leader>ml", "<cmd>IcedJumpToLet<cr>", desc = "NeoTree",
+      },
+    },
+  },
 }
 
 local opts = {

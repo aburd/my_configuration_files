@@ -76,9 +76,6 @@ Plug 'eraserhd/parinfer-rust', {'do':
 Plug 'mfussenegger/nvim-dap'
 Plug 'mxsdev/nvim-dap-vscode-js'
 
-" Github
-Plug 'github/copilot.vim'
-
 " Personal
 Plug '~/aarons_utils'
 

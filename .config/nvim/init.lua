@@ -6,7 +6,6 @@ vim.cmd.source("~/.config/nvim/coc.vim")
 vim.cmd.source("~/.config/nvim/plugins.lua")
 vim.cmd.source("~/.config/nvim/coc.lua")
 vim.cmd.source("~/.vimrc")
-vim.cmd.source("~/.config/nvim/keys.vim")
 
 -- configs
 vim.cmd.source("~/.config/nvim/configs/conjure.vim")
@@ -15,3 +14,8 @@ vim.cmd.source("~/.config/nvim/configs/fzf.lua")
 vim.cmd.source("~/.config/nvim/configs/marks.nvim.lua")
 -- vim.cmd.source("~/.config/nvim/configs/dmacro.nvim.lua")
 vim.cmd.source("~/.config/nvim/configs/vim-iced.vim")
+vim.cmd.source("~/.config/nvim/configs/neotree.nvim.lua")
+vim.cmd.source("~/.config/nvim/configs/spectre.nvim.lua")
+vim.cmd.source("~/.config/nvim/configs/oil.nvim.lua")
+
+vim.cmd.source("~/.config/nvim/keys.vim")

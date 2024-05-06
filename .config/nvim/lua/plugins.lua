@@ -1,4 +1,4 @@
--- [nfnl] Compiled from plugins.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] Compiled from fnl/plugins.fnl by https://github.com/Olical/nfnl, do not edit.
 local lazypath = (vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 local function lazy_is_installed_3f()
   if (vim.uv or vim.loop).fs_stat(lazypath) then

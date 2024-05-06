@@ -41,6 +41,7 @@ nnoremap <leader>j :tabprevious<CR>
 noremap <leader>k :tabnext<CR>
 nnoremap <leader>m :tabm -1<CR>
 nnoremap <leader>, :tabm +1<CR>
+nnoremap <C-t> :Telescope tabs<CR>
 
 " Highlighting
 noremap <C-m> :noh<CR>
@@ -72,6 +73,7 @@ nnoremap <Bslash>t :CocCommand tsserver.chooseVersion<CR>
 
 " Jump
 nnoremap <Bslash>j :call CocActionAsync('jumpDefinition')<CR>
+nnoremap <Bslash>d :tabonly<CR>
 
 " Git-Blame-Nvim
 nnoremap <C-g> :GitBlameToggle<CR>

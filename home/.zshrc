@@ -126,3 +126,8 @@ if [ $? -eq 0 ]; then
   export PATH="$HOME/.jenv/bin:$PATH"
   eval "$(jenv init -)"
 fi
+
+# fnm
+export PATH="/Users/aburd/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+alias nvm=fnm

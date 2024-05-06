@@ -18,6 +18,7 @@ export QT_IM_MODULE=fcitx
 export XDG_CURRENT_DESKTOP=sway
 
 export PICO_SDK_PATH=/home/aburd/code/pico-c/pico/pico-sdk
+export PATH=$PATH:/Users/aburd/.local/share/nvim/plugged/vim-iced/bin
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

@@ -53,15 +53,22 @@
   "diagnostic-languageserver.filetypes": {
     "clojure": "clj_kondo_lint"
   },
+  "clojure.keymaps.enable": false,
   "languageserver": {
     "ocaml": {
       "command": "ocamllsp",
       "filetypes": ["ml"]
+    },
+    "fennel": {
+      "command": "fennel-language-server",
+      "filetypes": ["fnl"]
     }
   },
   "eslint": {
     "autoFixOnSave": true,
-    "workingDirectories": [{ "mode": "auto" }]
-  },
-  "snippets.ultisnips.pythonPrompt": false
+    "workingDirectories": [{ "mode": "auto" }],
+    "experimental": {
+      "useFlatConfig": true
+    }
+  }
 }

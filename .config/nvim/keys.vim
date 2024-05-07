@@ -41,6 +41,12 @@ nnoremap <leader>j :tabprevious<CR>
 noremap <leader>k :tabnext<CR>
 nnoremap <leader>u :tabm -1<CR>
 nnoremap <leader>i :tabm +1<CR>
+nnoremap ,a 1gt
+nnoremap ,s 2gt
+nnoremap ,d 3gt
+nnoremap ,f 4gt
+nnoremap ,g 5gt
+nnoremap ,h 6gt
 nnoremap <C-t> :Telescope tabs<CR>
 
 " Highlighting

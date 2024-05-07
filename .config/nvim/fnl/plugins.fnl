@@ -24,7 +24,7 @@
    :lambdalisue/suda.vim
    :f-person/git-blame.nvim
    :rust-lang/rust.vim
-   {:url :neoclide/coc.nvim 
+   {:url "https://github.com/neoclide/coc.nvim"
     :branch "release"}
    {:url "https://github.com/nvim-neo-tree/neo-tree.nvim"
     :branch "v3.x"
@@ -93,7 +93,18 @@
     :ft "fennel"}
 
    ; Clojure
-   "Olical/conjure"
+   {:url "https://github.com/Olical/conjure"
+    :ft ["fennel"]}
+
+   {:url "https://github.com/liquidz/vim-iced"
+     :ft ["clojure"]
+     :config (fn []
+               (tset vim.g :iced_enable_default_key_mappings true)
+               (tset vim.g :iced_default_key_mapping_leader "<LocalLeader>"))
+     :keys [["<leader>mn" "<cmd>IcedJumpToNextSign<cr>"]
+            ["<leader>mN" "<cmd>IcedJumpToPrevSign<cr>"]
+            ["<leader>ml" "<cmd>IcedJumpToLet<cr>"]]}
+          
    {:url "m00qek/baleia.nvim" 
     :tag "v1.4.0"}
    "tpope/vim-dispatch"

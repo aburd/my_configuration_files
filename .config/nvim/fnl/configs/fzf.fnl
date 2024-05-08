@@ -1,6 +1,7 @@
 (local telescope (require :telescope))
 (local themes (require :telescope.themes))
 (local telescopeConfig (require :telescope.config))
+(local actions (require :telescope.actions))
 
 ; Clone the default Telescope configuration)
 (local vimgrep_arguments [(unpack telescopeConfig.values.vimgrep_arguments)])
@@ -16,9 +17,9 @@
                       :case_mode "smart_case"}
                 :tabs {:theme (themes.get_ivy)}}
    :defaults {: vimgrep_arguments}
-   :pickers {:find_files {:find_command [:rg :--files :--hidden :--glob "!**/.git/*"]}}
-   :buffers {:sort_lastused true
-             :mappings {:i {["c-d>"] "delete_buffer"}}}})
+   :pickers {:find_files {:find_command [:rg :--files :--hidden :--glob "!**/.git/*"]}
+             :buffers {:sort_lastused true
+                       :mappings {:i {"<c-d>" actions.delete_buffer}}}}})
 
 ; To get fzf loaded and working with telescope, you need to call)
 ; load_extension, somewhere after setup function:)

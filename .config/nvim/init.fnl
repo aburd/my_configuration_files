@@ -2,6 +2,6 @@
 
 (require :plugins)
 (require :configs)
+
 (vim.cmd.source "~/.vimrc")
-(vim.cmd.source "~/.config/nvim/vim/configs/luasnip.vim")
-(vim.cmd.source "~/.config/nvim/vim/keys.vim")
+(vim.cmd.source "~/.config/nvim/vim/init.vim")

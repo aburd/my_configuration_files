@@ -2,7 +2,7 @@ local lspconfig = require 'lspconfig'
 require 'lspconfig.configs'.fennel_language_server = {
   default_config = {
     -- replace it with true path
-    cmd = {'/home/aburd/.cargo/bin/fennel-language-server'},
+    cmd = {'/Users/aburd/.cargo/bin/fennel-language-server'},
     filetypes = {'fennel', 'fnl'},
     single_file_support = true,
     -- source code resides in directory `fnl/`

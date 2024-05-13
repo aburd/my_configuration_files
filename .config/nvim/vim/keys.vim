@@ -53,8 +53,8 @@ nnoremap <C-t> :Telescope tabs<CR>
 noremap <C-m> :noh<CR>
 
 " Tree
-nmap <F6> :Neotree toggle<CR>
-map <leader><space> :Neotree reveal<cr>
+nmap <F6> :NvimTreeToggle<CR>
+map <leader><space> :NvimTreeFindFile!<cr>
 " nmap <F6> :NERDTreeToggle<CR>
 " let NERDTreeShowHidden=1
 " map <leader>r :NERDTreeFind<cr>

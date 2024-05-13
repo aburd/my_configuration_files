@@ -26,17 +26,12 @@
    :rust-lang/rust.vim
    {:url "https://github.com/neoclide/coc.nvim"
     :branch "release"}
-   {:url "https://github.com/nvim-neo-tree/neo-tree.nvim"
-    :branch "v3.x"
-    :dependencies ["nvim-lua/plenary.nvim"
-                   "nvim-tree/nvim-web-devicons" 
-                   "MunifTanjim/nui.nvim"]
-                   ; "3rd/image.nvim" -- Optional image support in preview window: See `# Preview Mode` for more information}
-          
-     :config {
-              :filesystem {
-                           :filtered_items {
-                                            :hide_dotfiles false}}}}
+   {:url "https://github.com/nvim-tree/nvim-tree.lua"
+    :version :*
+    :lazy false
+    :dependencies ["nvim-tree/nvim-web-devicons"] 
+    :config (fn []
+              ((. (require :nvim-tree) :setup) {:filters {:dotfiles false}}))}
    :stevearc/oil.nvim
    :rcarriga/nvim-notify
 
@@ -56,8 +51,9 @@
    "samoshkin/vim-mergetool"
 
    ; Snippets
-   "SirVer/ultisnips"
-   "mlaursen/vim-react-snippets"
+   {:url "https://github.com/L3MON4D3/LuaSnip"
+    :version "v2.*"
+    :build "make install_jsregexp"}
 
    ; find replace
    "nvim-pack/nvim-spectre"

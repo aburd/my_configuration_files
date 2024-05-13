@@ -18,6 +18,6 @@
                       (map (fn [line]
                              (let [[hashes title] (s/split line #"\s")
                                    anchor-link (format "#%s" (s/replace (s/lower-case title) #"\s" "-"))
-                                   tabs (apply str (repeat (count hashes) "\t"))]
+                                   tabs (apply str (repeat (dec (count hashes)) "  "))]
                                (format "%s- [%s](%s)" tabs title anchor-link)))))]
     (println (s/join "\n" headings))))

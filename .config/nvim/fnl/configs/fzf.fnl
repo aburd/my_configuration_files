@@ -1,4 +1,5 @@
 (local telescope (require :telescope))
+(local builtins (require :telescope.builtin))
 (local themes (require :telescope.themes))
 (local telescopeConfig (require :telescope.config))
 (local actions (require :telescope.actions))
@@ -19,8 +20,11 @@
    :defaults {: vimgrep_arguments}
    :pickers {:find_files {:find_command [:rg :--files :--hidden :--glob "!**/.git/*"]}
              :buffers {:sort_lastused true
-                       :mappings {:i {"<c-d>" actions.delete_buffer}}}}})
+                       :mappings {:i {"<c-d>" actions.delete_buffer}}}
+             :colorscheme {:enable_preview true}}})
 
 ; To get fzf loaded and working with telescope, you need to call)
 ; load_extension, somewhere after setup function:)
 ((-> (require :telescope) (. :load_extension)) "fzf")
+
+(vim.api.nvim_create_user_command "Colorscheme" (fn [] (builtins.colorscheme {})) {})

@@ -1,5 +1,6 @@
 (vim.api.nvim_command "set rtp+=~/.config/nvim")
 
+(require :autocmd)
 (require :plugins)
 (require :configs)
 

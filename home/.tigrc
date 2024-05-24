@@ -271,7 +271,7 @@ bind generic	<Right>	scroll-right
 bind generic	<Ins>	scroll-line-up
 bind generic	<C-Y>	scroll-line-up
 bind generic	<Del>	scroll-line-down
-bind generic	<C-E>	scroll-line-down
+# bind generic	<C-E>	scroll-line-down
 bind generic	<SBack>	scroll-page-up
 bind generic	<SFwd>	scroll-page-down
 # bind generic	???	scroll-half-page-up

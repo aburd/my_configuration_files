@@ -62,9 +62,9 @@
    "nvim-lua/plenary.nvim"
    "junegunn/fzf"
    "junegunn/fzf.vim"
-   {:url "nvim-telescope/telescope.nvim" 
+   {:url "https://github.com/nvim-telescope/telescope.nvim" 
     :tag "0.1.5"}
-   {:url "nvim-telescope/telescope-fzf-native.nvim"
+   {:url "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
     :build "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"}
 
    "aburd/telescope-tabs" 
@@ -85,7 +85,7 @@
    "chentoast/marks.nvim"
 
    ; fennel
-   {:url "Olical/nfnl" 
+   {:url "https://github.com/Olical/nfnl" 
     :ft "fennel"}
 
    ; Clojure
@@ -99,14 +99,15 @@
                (tset vim.g :iced_default_key_mapping_leader "<LocalLeader>"))
      :keys [["<leader>mn" "<cmd>IcedJumpToNextSign<cr>"]
             ["<leader>mN" "<cmd>IcedJumpToPrevSign<cr>"]
-            ["<leader>ml" "<cmd>IcedJumpToLet<cr>"]]}
+            ["<leader>ml" "<cmd>IcedJumpToLet<cr>"]]
+     :dependencies [:guns/vim-sexp]}
           
-   {:url "m00qek/baleia.nvim" 
+   {:url "https://github.com/m00qek/baleia.nvim" 
     :tag "v1.4.0"}
    "tpope/vim-dispatch"
    "clojure-vim/vim-jack-in"
    "radenling/vim-dispatch-neovim"
-   {:url "eraserhd/parinfer-rust" 
+   {:url "https://github.com/eraserhd/parinfer-rust" 
     :build "cargo build --release"}])
 
 ((. (require "lazy") "setup") plugins)

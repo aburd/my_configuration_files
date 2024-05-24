@@ -34,5 +34,6 @@ let g:iced#hook = {
 nmap <Leader>mn <Plug>(iced_jump_to_next_sign)
 nmap <Leader>mN <Plug>(iced_jump_to_prev_sign)
 nmap <Leader>ml <Plug>(iced_jump_to_let)
+" nmap <C-[> :1po<CR>
 " <Leader>rcn
 nmap <Nop>(iced_macroexpand_outer_list) <Plug>(iced_macroexpand_outer_list) 

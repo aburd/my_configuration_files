@@ -35,6 +35,10 @@
    :stevearc/oil.nvim
    :rcarriga/nvim-notify
 
+   ; Github
+   :ldelossa/litee.nvim
+   :ldelossa/gh.nvim
+
    "jasonccox/vim-wayland-clipboard"
    "nvim-treesitter/nvim-treesitter"
    "tpope/vim-surround"
@@ -90,10 +94,10 @@
 
    ; Clojure
    {:url "https://github.com/Olical/conjure"
-    :ft ["fennel"]}
+    :ft ["fennel" "clojure"]}
 
    {:url "https://github.com/liquidz/vim-iced"
-     :ft ["clojure"]
+     :ft []
      :config (fn []
                (tset vim.g :iced_enable_default_key_mappings true)
                (tset vim.g :iced_default_key_mapping_leader "<LocalLeader>"))

@@ -128,6 +128,11 @@ if [ $? -eq 0 ]; then
 fi
 
 # fnm
-export PATH="/Users/aburd/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  export PATH="/home/aburd/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+elif [[ "$OSTYPE" == "darwin" ]]; then
+  export PATH="/Users/aburd/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
 alias nvm=fnm

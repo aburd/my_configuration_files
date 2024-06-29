@@ -1,0 +1,7 @@
+(require "configs.conjure")
+(require "configs.fennel-language-server")
+(require "configs.fzf")
+(require "configs.gh")
+(require "configs.marks")
+(require "configs.oil")
+(require "configs.treesitter")

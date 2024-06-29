@@ -68,7 +68,7 @@
     "autoFixOnSave": true,
     "workingDirectories": [{ "mode": "auto" }],
     "experimental": {
-      "useFlatConfig": true
+      "useFlatConfig": false
     }
   }
 }

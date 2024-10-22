@@ -108,32 +108,3 @@ source "$HOME/.profile"
 if [ -e "$HOME/.bash_profile" ]; then
   source "$HOME/.bash_profile"
 fi
-
-# pnpm
-export PNPM_HOME="/home/aburd/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-which jenv >/dev/null 2>&1
-if [ $? -ne 0 ]; then
-  export PATH="$HOME/.jenv/bin:$PATH"
-  eval "$(jenv init -)"
-fi
-
-# fnm
-FNM_PATH="/home/aburd/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  if [ $(uname) = "Linux" ]; then
-    export PATH="$FNM_PATH:$PATH"
-  else
-    export PATH="/Users/aburd/Library/Application Support/fnm:$PATH"
-  fi
-  eval "`fnm env`"
-fi
-
-alias nvm=fnm

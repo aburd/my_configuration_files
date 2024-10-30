@@ -46,6 +46,9 @@ export PATH=$PATH:/usr/sbin
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/jdk-21.0.1+12/bin:$PATH"
 
+# personal
+alias config="cd $HOME/code/aburd/my_configuration_files"
+
 alias ll="exa -la"
 alias show_keypress="xev"
 alias fexplore="ranger"

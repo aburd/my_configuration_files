@@ -16,6 +16,7 @@ stow
 
 # wm
 sway
+waybar
 i3
 
 # shell

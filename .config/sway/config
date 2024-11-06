@@ -260,10 +260,11 @@ bar swaybar_command waybar
 client.focused #184D47 #113029ee #eeeeee
 client.unfocused #184D47aa #113029d5 #ddddddcc
 gaps inner 5
+font FiraCode Regular 10
 
 #
 # notifications:
 #
-# https://github.com/ErikReider/SwayNotificationCenter
+# https://github.com/EikReider/SwayNotificationCenter
 exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw

@@ -258,10 +258,11 @@ bindsym $mod+r mode "resize"
 
 bar swaybar_command waybar
 
-client.focused #184D47 #113029ee #eeeeee
-client.unfocused #184D47aa #113029d5 #ddddddcc
-gaps inner 5
-font FiraCode Regular 10
+client.focused #5e1233 #b0205eee #eeeeee #000000 #5e1233
+client.focused_inactive #5e1233 #b0205e99 #eeeeee #000000 #5e1233
+client.unfocused #5e1233 #6d1e4bbb #eeeeee #000000 #5e1233
+gaps inner 4
+font Montserrat 10
 
 #
 # notifications:

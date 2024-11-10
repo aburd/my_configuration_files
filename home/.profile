@@ -133,3 +133,14 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 alias nvm=fnm
+
+# deno shell setup; adapted from rustup
+# affix colons on either side of $PATH to simplify matching
+case ":${PATH}:" in
+    *:"/home/aburd/.deno/bin":*)
+        ;;
+    *)
+        # Prepending path in case a system-installed deno executable needs to be overridden
+        export PATH="/home/aburd/.deno/bin:$PATH"
+        ;;
+esac

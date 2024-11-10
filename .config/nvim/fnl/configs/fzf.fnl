@@ -16,7 +16,8 @@
                       :override_generic_sorter true
                       :override_file_sorter true
                       :case_mode "smart_case"}
-                :tabs {:theme (themes.get_ivy)}}
+                :tabs {:theme (themes.get_ivy)}
+                :yanks {:theme (themes.get_ivy)}}
    :defaults {: vimgrep_arguments}
    :pickers {:find_files {:find_command [:rg :--files :--hidden :--glob "!**/.git/*"]}
              :buffers {:sort_lastused true
@@ -25,6 +26,7 @@
 
 ; To get fzf loaded and working with telescope, you need to call)
 ; load_extension, somewhere after setup function:)
-((-> (require :telescope) (. :load_extension)) "fzf")
+((-> telescope (. :load_extension)) "fzf")
+((-> telescope (. :load_extension)) "yanks")
 
 (vim.api.nvim_create_user_command "Colorscheme" (fn [] (builtins.colorscheme {})) {})

@@ -70,6 +70,7 @@
    "aburd/telescope-tabs" 
    ; {:dir "/home/aburd/code/aburd/telescope-tabs"}
    ; {:dir "/home/aburd/code/aburd/coc-fennel"}
+   {:dir "/home/aburd/code/aburd/telescope-yanks"}
 
    ; Async
    "nvim-neotest/nvim-nio"
@@ -101,7 +102,7 @@
             ["<leader>mN" "<cmd>IcedJumpToPrevSign<cr>"]
             ["<leader>ml" "<cmd>IcedJumpToLet<cr>"]]
      :dependencies [:guns/vim-sexp]}
-          
+
    {:url "https://github.com/m00qek/baleia.nvim" 
     :tag "v1.4.0"}
    "tpope/vim-dispatch"

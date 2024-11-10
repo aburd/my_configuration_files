@@ -1,5 +1,6 @@
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
+# japanese
 exec fcitx5 -d
 
 # Default config for sway
@@ -35,7 +36,7 @@ set $menu kickoff
 # background $HOME/.config/sway/bgs/purple_green_fractal.png fill 
   # background /usr/share/wallpapers/DebianTheme/contents/images/1600x1200.svg fill
 
-exec swaybg -i /usr/share/wallpapers/DebianTheme/contents/images/1280x1024.svg -m fill
+exec $HOME/.config/sway/random_background.sh
 
 output eDP-1 {
   resolution 2256x1504 
@@ -50,7 +51,7 @@ output eDP-1 {
 # Example configuration:
 #
 # exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 300 'swaylock -f -c 000000' e
 #          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
@@ -112,7 +113,7 @@ input "type:keyboard" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut, dude. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -239,20 +240,32 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position bottom
+# bar {
+#     position bottom
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while "$HOME/.config/sway/bar.sh"; do sleep 2; done
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while "$HOME/.config/sway/bar.sh"; do sleep 2; done
 
-    colors {
-        statusline #ffffff
-        background #184D47bb
-        focused_workspace #ffffff #035956ff #ffffff
-        active_workspace #ffffff #035956cc #ffffff
-        inactive_workspace #00917C #00917Cff #00917C44
-    }
-}
+#     colors {
+#         statusline #ffffff
+#         background #184D47bb
+#         focused_workspace #ffffff #035956ff #ffffff
+#         active_workspace #ffffff #035956cc #ffffff
+#         inactive_workspace #00917C #00917Cff #00917C44
+#     }
+# }
 
-client.focused #184D47 #184D47 #ffffff
+bar swaybar_command waybar
+
+client.focused #184D47 #113029ee #eeeeee
+client.unfocused #184D47aa #113029d5 #ddddddcc
+gaps inner 5
+font FiraCode Regular 10
+
+#
+# notifications:
+#
+# https://github.com/EikReider/SwayNotificationCenter
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw

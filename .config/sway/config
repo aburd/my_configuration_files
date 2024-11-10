@@ -95,7 +95,8 @@ input "type:keyboard" {
     bindsym $mod+p exec /bin/wofi --show run
 
     # screenshot
-    bindsym $mod+F3 exec $HOME/.config/sway/screenshot.sh
+    bindsym $mod+Shift+s exec $HOME/.config/sway/screenshot.sh
+    bindsym $mod+Ctrl+Shift+s exec $HOME/.config/sway/screenshot-whole-screen.sh
 
     # emoji
     bindsym $mod+Shift+o exec wofi-emoji

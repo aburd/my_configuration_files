@@ -17,7 +17,9 @@
                       :override_file_sorter true
                       :case_mode "smart_case"}
                 :tabs {:theme (themes.get_ivy)}}
-   :defaults {: vimgrep_arguments}
+   :defaults {: vimgrep_arguments
+              :mappings {:i {"<C-Down>" actions.cycle_history_next 
+                             "<C-Up>" actions.cycle_history_prev}}}
    :pickers {:find_files {:find_command [:rg :--files :--hidden :--glob "!**/.git/*"]}
              :buffers {:sort_lastused true
                        :mappings {:i {"<c-d>" actions.delete_buffer}}}

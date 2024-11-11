@@ -108,7 +108,11 @@
    "clojure-vim/vim-jack-in"
    "radenling/vim-dispatch-neovim"
    {:url "https://github.com/eraserhd/parinfer-rust" 
-    :build "cargo build --release"}])
+    :build "cargo build --release"}
+
+   ; Denops
+   "vim-denops/denops.vim"
+   "lambdalisue/kensaku.vim"])
 
 ((. (require "lazy") "setup") plugins)
 

@@ -1,0 +1,88 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+    color: #eecbdf;
+}
+
+window#waybar {
+    background: rgba(26, 7, 18, 0.7);
+    /* border-bottom: 3px solid rgba(80, 35, 64, 0.5); */
+    color: #ffffff;
+}
+
+window#waybar.hidden {
+    opacity: 0.0;
+}
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button {
+    /* padding: 0 1px; */
+    /* border-bottom: 3px solid transparent; */
+    background: transparent;
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+    background: #502340;
+    border-bottom: 3px solid #d7aec8;
+}
+
+#workspaces button.urgent {
+    background-color: #d7aec8;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #custom-spotify, #custom-vlc, #tray, #mode, #idle_inhibitor {
+    padding: 0 10px;
+    /* margin: 0 5px; */
+    background-color: #502340;
+    color: #eecbdf;
+}
+
+#battery.charging {
+    background-color: #502340;
+    color: #eecbdf;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    background: #502340;
+    color: #eecbdf;
+}
+
+#pulseaudio.muted {
+    background: #502340;
+    color: #eecbdf;
+}
+
+#temperature.critical {
+    background: #eb4d4b;
+    color: #eecbdf;
+}
+
+#idle_inhibitor.activated {
+    background-color: #502340;
+    color: #eecbdf;
+}

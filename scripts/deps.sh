@@ -24,6 +24,11 @@ install()
     return;
   fi
 
+  if bin_exists dnf; then
+    sudo dnf install "$pkg" -y
+    return;
+  fi
+
   if bin_exists apt; then
     sudo apt install "$pkg" -y
     return;

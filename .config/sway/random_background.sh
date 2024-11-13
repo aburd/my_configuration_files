@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BACKGROUND_DIR="$HOME/Pictures/ralphsteadman"
+BACKGROUND_DIR="$HOME/Pictures/hackers"
 RANDOM_BACKGROUND=""
 
 random_background()

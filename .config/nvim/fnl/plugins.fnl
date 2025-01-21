@@ -70,7 +70,7 @@
    "aburd/telescope-tabs" 
    ; {:dir "/home/aburd/code/aburd/telescope-tabs"}
    ; {:dir "/home/aburd/code/aburd/coc-fennel"}
-   {:dir "/home/aburd/code/aburd/telescope-yanks"}
+   ; {:dir "/home/aburd/code/aburd/telescope-yanks"}
 
    ; Async
    "nvim-neotest/nvim-nio"

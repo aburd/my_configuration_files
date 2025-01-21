@@ -117,12 +117,6 @@ esac
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-which jenv >/dev/null 2>&1
-if [ $? -ne 0 ]; then
-  export PATH="$HOME/.jenv/bin:$PATH"
-  eval "$(jenv init -)"
-fi
-
 # fnm
 FNM_PATH="/home/aburd/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then

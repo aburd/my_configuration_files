@@ -59,6 +59,9 @@ map <leader><space> :NvimTreeFindFile!<cr>
 " let NERDTreeShowHidden=1
 " map <leader>r :NERDTreeFind<cr>
 
+" Find and Replace
+map <leader>r :GrugFar<cr>
+
 "" Fzf
 noremap <C-p> :Telescope find_files<CR>
 nnoremap <C-i> :Telescope live_grep<CR>

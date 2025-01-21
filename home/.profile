@@ -117,22 +117,14 @@ esac
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-which jenv >/dev/null 2>&1
-if [ $? -ne 0 ]; then
-  export PATH="$HOME/.jenv/bin:$PATH"
-  eval "$(jenv init -)"
-fi
+# which jenv >/dev/null 2>&1
+# if [ $? -ne 0 ]; then
+#   export PATH="$HOME/.jenv/bin:$PATH"
+#   eval "$(jenv init -)"
+# fi
 
 # fnm
-FNM_PATH="/home/aburd/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  if [ $(uname) = "Linux" ]; then
-    export PATH="$FNM_PATH:$PATH"
-  else
-    export PATH="/Users/aburd/Library/Application Support/fnm:$PATH"
-  fi
-  eval "`fnm env`"
-fi
+eval "`fnm env`"
 
 alias nvm=fnm
 
@@ -146,3 +138,4 @@ case ":${PATH}:" in
         export PATH="/home/aburd/.deno/bin:$PATH"
         ;;
 esac
+. "/Users/aburd/.deno/env"

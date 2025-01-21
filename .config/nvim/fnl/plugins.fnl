@@ -34,7 +34,15 @@
               ((. (require :nvim-tree) :setup) {:filters {:dotfiles false}}))}
    :stevearc/oil.nvim
    :rcarriga/nvim-notify
-
+   {:url "https://github.com/MagicDuck/grug-far.nvim"
+    :config (fn []
+              ((. (require :grug-far) :setup) {}))}
+   {:url "https://github.com/iamcco/markdown-preview.nvim"
+    :cmd ["MarkdownPreviewToggle" "MarkdownPreview" "MarkdownPreviewStop"]
+    :ft ["markdown"]
+    :build "cd app && yarn install"
+    :init (fn []
+            (tset vim.g :mkdp_filetypes ["markdown"]))}
    "jasonccox/vim-wayland-clipboard"
    "nvim-treesitter/nvim-treesitter"
    "tpope/vim-surround"
@@ -70,7 +78,7 @@
    "aburd/telescope-tabs" 
    ; {:dir "/home/aburd/code/aburd/telescope-tabs"}
    ; {:dir "/home/aburd/code/aburd/coc-fennel"}
-   {:dir "/home/aburd/code/aburd/telescope-yanks"}
+   ; {:dir "/home/aburd/code/aburd/telescope-yanks"}
 
    ; Async
    "nvim-neotest/nvim-nio"
@@ -93,15 +101,19 @@
    {:url "https://github.com/Olical/conjure"
     :ft ["fennel"]}
 
-   {:url "https://github.com/liquidz/vim-iced"
-     :ft ["clojure"]
-     :config (fn []
-               (tset vim.g :iced_enable_default_key_mappings true)
-               (tset vim.g :iced_default_key_mapping_leader "<LocalLeader>"))
-     :keys [["<leader>mn" "<cmd>IcedJumpToNextSign<cr>"]
-            ["<leader>mN" "<cmd>IcedJumpToPrevSign<cr>"]
-            ["<leader>ml" "<cmd>IcedJumpToLet<cr>"]]
-     :dependencies [:guns/vim-sexp]}
+   {:url "https://github.com/liquidz/elin"
+    :ft ["clojure"]}
+   "liquidz/elin-format"
+
+   ; {:url "https://github.com/liquidz/vim-iced"
+   ;   :ft ["clojure"]
+   ;   :config (fn []
+   ;             (tset vim.g :iced_enable_default_key_mappings true)
+   ;             (tset vim.g :iced_default_key_mapping_leader "<LocalLeader>"))
+   ;   :keys [["<leader>mn" "<cmd>IcedJumpToNextSign<cr>"]
+   ;          ["<leader>mN" "<cmd>IcedJumpToPrevSign<cr>"]
+   ;          ["<leader>ml" "<cmd>IcedJumpToLet<cr>"]]
+   ;   :dependencies [:guns/vim-sexp]}
 
    {:url "https://github.com/m00qek/baleia.nvim" 
     :tag "v1.4.0"}

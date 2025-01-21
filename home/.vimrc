@@ -123,13 +123,13 @@ function! ToggleSpellCheck()
   endif
 endfunction
 
+nnoremap <silent> <Leader>S :call ToggleSpellCheck()<CR>
+
 " use firefox with markdown preview
 function OpenMarkdownPreview (url)
      " execute "silent ! pidof firefox || firefox & sleep 1 && firefox " . a:url
      execute "silent ! /Applications/Firefox.app/Contents/MacOS/firefox " . a:url
 endfunction
-
-nnoremap <silent> <Leader>S :call ToggleSpellCheck()<CR>
 
 let system_type = trim(system('uname'))
 if system_type == 'Darwin'

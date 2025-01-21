@@ -1,0 +1,1 @@
+{:interceptor {:uses [elin-format.core/format-current-form-interceptor {:command ["cljstyle" "pipe"]}]}}

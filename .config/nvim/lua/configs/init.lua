@@ -1,7 +1,0 @@
-require("configs.conjure")
-require("configs.deno")
-require("configs.fennel-language-server")
-require("configs.fzf")
-require("configs.marks")
-require("configs.oil")
-require("configs.treesitter")

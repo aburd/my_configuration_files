@@ -17,9 +17,6 @@ export QT_IM_MODULE=fcitx
 # Desktop
 export XDG_CURRENT_DESKTOP=sway
 
-export PICO_SDK_PATH=/home/aburd/code/pico-c/pico/pico-sdk
-export PATH=$PATH:/Users/aburd/.local/share/nvim/plugged/vim-iced/bin
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -80,11 +77,23 @@ alias ga="git add ."
 alias gg="git grep -n"
 alias g="lazygit"
 alias audio="pavucontrol"
+alias restart_docker_compose="docker compose down && docker compose build && docker compose up -d"
 
 # There are a couple tools capable of writing to the clipboard; I use xsel. 
 # It takes flags to write to the primary X selection (-p), secondary selection (-s), or clipboard (-b). Passing it -i will tell it to read from stdin, so you want:
 # $ echo "Some Text" | xsel -i -b
 alias copy="xsel"
+
+# search history by piping it into fzf, will not sort
+function search()
+{
+  TMP_CMD=$(history | cut -c 8- | fzf --no-sort --tac)
+  # append this command to zsh history
+  print -s $TMP_CMD > /dev/null 2> /dev/null
+  # execute
+  eval $TMP_CMD
+}
+alias s="search"
 
 # TODO: make configurable
 # Not in vim
@@ -139,3 +148,10 @@ case ":${PATH}:" in
         ;;
 esac
 . "/Users/aburd/.deno/env"
+
+export AWS_PROFILE=tykm-dev-ai
+export CLAUDE_CODE_USE_BEDROCK=1
+export ANTHROPIC_MODEL='us.anthropic.claude-sonnet-4-5-20250929-v1:0'
+
+export AWS_ACCESS_KEY_ID=dummyKey
+export AWS_SECRET_ACCESS_KEY=dummysecret

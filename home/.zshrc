@@ -10,7 +10,7 @@ export VISUAL='nvim'
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic" # set by `omz`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -109,3 +109,21 @@ if [ -e "$HOME/.bash_profile" ]; then
   source "$HOME/.bash_profile"
 fi
 . "/Users/aburd/.deno/env"
+
+export COREPACK_ENABLE_AUTO_PIN="0"
+
+alias claude="/Users/aburd/.claude/local/claude"
+
+# fnm
+FNM_PATH="/opt/homebrew/opt/fnm/bin"
+if [ -d "$FNM_PATH" ]; then
+  eval "`fnm env`"
+fi
+
+# pnpm
+export PNPM_HOME="/Users/aburd/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

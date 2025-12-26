@@ -1,8 +1,14 @@
-let g:airline_theme='wombat'
-colorscheme nightfox
+" let g:airline_theme='wombat'
+" colorscheme nightfox
+colorscheme night-owl
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" To enable the lightline theme
+let g:lightline = { 'colorscheme': 'nightowl' }
 
 " CoC
-let g:coc_global_extensions = ['coc-deno', 'coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-sumneko-lua', 'coc-jest', 'coc-prettier', 'coc-html', 'coc-clojure', 'coc-diagnostic', 'coc-eslint']
+" let g:coc_global_extensions = ['coc-deno', 'coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-sumneko-lua', 'coc-jest', 'coc-prettier', 'coc-html', 'coc-clojure', 'coc-diagnostic', 'coc-eslint']
+let g:coc_global_extensions = ['coc-deno', 'coc-tsserver', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-solargraph', 'coc-sumneko-lua', 'coc-jest', 'coc-prettier', 'coc-html', 'coc-diagnostic', 'coc-eslint']
 
 let g:mergetool_layout = 'mr'
 let g:mergetool_prefer_revision = 'local'

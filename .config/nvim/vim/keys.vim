@@ -52,13 +52,6 @@ nnoremap <C-t> :Telescope tabs<CR>
 " Highlighting
 noremap <C-m> :noh<CR>
 
-" Tree
-nmap <F6> :NvimTreeToggle<CR>
-map <leader><space> :NvimTreeFindFile!<cr>
-" nmap <F6> :NERDTreeToggle<CR>
-" let NERDTreeShowHidden=1
-" map <leader>r :NERDTreeFind<cr>
-
 " Find and Replace
 map <leader>r :GrugFar<cr>
 
@@ -67,6 +60,9 @@ noremap <C-p> :Telescope find_files<CR>
 nnoremap <C-i> :Telescope live_grep<CR>
 nnoremap <C-o> :Telescope buffers<CR>
 nnoremap <C-u> :Telescope help_tags<CR>
+
+nnoremap U :m +1<CR>
+nnoremap I :m -2<CR>
 
 "" Marks
 

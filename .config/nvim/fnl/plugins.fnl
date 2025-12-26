@@ -99,6 +99,7 @@
    ;; Marks
    "chentoast/marks.nvim"
    "https://github.com/folke/noice.nvim"
+   "https://github.com/MunifTanjim/nui.nvim"
 
    ; fennel
    {:url "https://github.com/Olical/nfnl" 

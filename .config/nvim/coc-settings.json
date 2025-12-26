@@ -16,7 +16,8 @@
     "typescriptreact",
     "javascript",
     "rust",
-    "html"
+    "html",
+    "vue"
   ],
   "Lua.diagnostics.globals": [
     "vim",
@@ -62,6 +63,12 @@
     "fennel": {
       "command": "fennel-language-server",
       "filetypes": ["fnl"]
+    },
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      // customize filetypes to your needs
+      "filetypes": ["typescript", "typescriptreact", "graphql"]
     }
   },
   "eslint": {
@@ -70,5 +77,8 @@
     "experimental": {
       "useFlatConfig": true
     }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }

@@ -21,17 +21,26 @@
 (local plugins 
   [:neovim/nvim-lspconfig
    :christoomey/vim-tmux-navigator
+   ; debug
+   ; - Install nvim-dap-node for Node.js debugging
+   :mfussenegger/nvim-dap
+   :nvim-neotest/nvim-nio
+   :rcarriga/nvim-dap-ui
+   :theHamsta/nvim-dap-virtual-text
+   ; debug-end
+   {:url "https://github.com/rmagatti/auto-session"
+    :lazy false
+    :opts {}}
+   :voldikss/vim-translator
    :lambdalisue/suda.vim
    :f-person/git-blame.nvim
    :rust-lang/rust.vim
    {:url "https://github.com/neoclide/coc.nvim"
     :branch "release"}
-   {:url "https://github.com/nvim-tree/nvim-tree.lua"
-    :version :*
+   {:url "https://github.com/vimiomori/bluedolphin.nvim"
     :lazy false
-    :dependencies ["nvim-tree/nvim-web-devicons"] 
-    :config (fn []
-              ((. (require :nvim-tree) :setup) {:filters {:dotfiles false}}))}
+    :priority 1000
+    :opts {}}
    :stevearc/oil.nvim
    :rcarriga/nvim-notify
    {:url "https://github.com/MagicDuck/grug-far.nvim"
@@ -79,9 +88,6 @@
    ; {:dir "/home/aburd/code/aburd/telescope-tabs"}
    ; {:dir "/home/aburd/code/aburd/coc-fennel"}
    ; {:dir "/home/aburd/code/aburd/telescope-yanks"}
-
-   ; Async
-   "nvim-neotest/nvim-nio"
         
    ;; Themes
    "flazz/vim-colorschemes"
@@ -92,6 +98,7 @@
 
    ;; Marks
    "chentoast/marks.nvim"
+   "https://github.com/folke/noice.nvim"
 
    ; fennel
    {:url "https://github.com/Olical/nfnl" 
@@ -104,16 +111,17 @@
    {:url "https://github.com/liquidz/elin"
     :ft ["clojure"]}
    "liquidz/elin-format"
-
-   ; {:url "https://github.com/liquidz/vim-iced"
-   ;   :ft ["clojure"]
-   ;   :config (fn []
-   ;             (tset vim.g :iced_enable_default_key_mappings true)
-   ;             (tset vim.g :iced_default_key_mapping_leader "<LocalLeader>"))
-   ;   :keys [["<leader>mn" "<cmd>IcedJumpToNextSign<cr>"]
-   ;          ["<leader>mN" "<cmd>IcedJumpToPrevSign<cr>"]
-   ;          ["<leader>ml" "<cmd>IcedJumpToLet<cr>"]]
-   ;   :dependencies [:guns/vim-sexp]}
+   "haishanh/night-owl.vim"
+   {:url "https://gitlab.com/HiPhish/rainbow-delimiters.nvim"
+    :ft ["fennel" "clojure"]}
+   {1 "coder/claudecode.nvim"
+    :dependencies ["folke/snacks.nvim"]
+    :config true
+    :opts {:terminal_cmd "/Users/aburd/.claude/local/claude"}
+    :lazy false
+    :keys
+    [{1 "<leader>b" 2 nil :desc "AI/Claude Code"}
+     {1 "<leader>bc" 2 "<cmd>ClaudeCode<cr>" :desc "Toggle Claude"}]}
 
    {:url "https://github.com/m00qek/baleia.nvim" 
     :tag "v1.4.0"}

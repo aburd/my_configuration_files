@@ -1,1 +1,7 @@
-{:interceptor {:uses [elin-format.core/format-current-form-interceptor {:command ["cljstyle" "pipe"]}]}}
+{:interceptor {:uses [elin-format.core/format-current-form-interceptor {:command ["cljstyle" "pipe"]}]}
+ :handler
+ {:config-map
+  {elin.handler.evaluate/reload
+   {:interceptor
+    {:uses [elin.interceptor.handler.evaluate/hook {:before (user/stop)
+                                                    :after (user/start)}]}}}}}
